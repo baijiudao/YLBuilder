@@ -219,21 +219,13 @@ var pasteControl = function(copyId){
                     inItVideoControl.copy(copyId[i], inItVideoControl.id);
                     tempSelecteId.push(inItVideoControl.id);
                     break;
-                case "Pip":
+               case "Pip":
                     var getElevatorDatas = getContrlStyle(copyId[i]);
                     var x = parseInt(parseInt(getElevatorDatas.X) + 50 - scrolleft);
                     var y = parseInt(parseInt(getElevatorDatas.Y) + 50 -scroltop);
                     inItPipelineControl.createPipelineControl(x, y);
                     inItPipelineControl.pipeline_copy(copyId[i],inItPipelineControl.id);
                     tempSelecteId.push(inItPipelineControl.id);
-                    break;
-                case "Batch":
-                    //var getBatchDatas = getContrlStyle(copyId[i]);
-                    //var x = parseInt(parseInt(getBatchDatas.X) + 50 - scrolleft);
-                    //var y = parseInt(parseInt(getBatchDatas.Y) + 50 -scroltop);
-                    //inItBatchControl.createBatchControl(x, y);
-                    //inItBatchControl.copy(copyId[i],inItPipelineControl.id);
-                    //tempSelecteId.push(inItBatchControl.id);
                     break;
                 default:false;
             }
@@ -257,10 +249,6 @@ var pasteControl = function(copyId){
                         inItPropertiesPage.PropertiesChartPage(selecteId);
                         inItPropertiesPage.PublicFeatures(selecteId);
                         determineControlType(selecteId[0]);
-                    }else if(selecteId[0].split("_")[0] === "Batch"){
-                        //inItPropertiesPage.PropertiesBatchPage(selecteId);
-                        //inItPropertiesPage.PublicFeatures(selecteId);
-                        //determineControlType(selecteId[0]);
                     }else{
                         inItPropertiesPage.PropertiesPage(selecteId);
                         inItPropertiesPage.PublicFeatures(selecteId);
@@ -444,11 +432,6 @@ var determineControlType = function(str){
         case 'Video':
             inItVideoControl.VideoPropertiesPage(selecteId);
             inItVideoControl.VideoPageFeatures(selecteId);
-            break;
-        case 'Batch':
-            inItBatchControl.BatchPropertiesPage(selecteId);
-            inItBatchControl.BatchFeatures(selecteId);
-            inItModalFeature.Modalbox(selecteId);//配置变量
             break;
         default:false;
     }
@@ -19133,123 +19116,4 @@ var Pipeline = function(){
             }  
         }
     }
-};
-/*******************组控控件*******************/
-var BatchControl = function(){
-    this.configId = -1;
-    this.createBatchControl = function (x, y) {
-        $("body").width($(window).width()+document.body.scrollLeft);
-        var maxNum = inItAllElementId.batchElementIDMaxNum();
-        if(this.configId <= maxNum){
-            this.configId = maxNum;
-        }
-        this.configId = this.configId + 1;
-        var idd = "Batch_" + this.configId;
-        this.id = idd;
-        var textDiv = $(
-            '<div id='+idd+' class="contrl move" dataType="0,1,2,3" sure="yes" success="yes" fails="yes">'
-            +    '<div class="total_box">'
-            +        '<div class="total_child">'
-            +            '<div id="select'+idd+'" class="selectAreaBox">'
-            +                '<div id="combo'+idd+'" class="combodropdiv">'
-            +                    '<div id="comboselect'+idd+'" readonly="readonly" class="selectArea" displayMember="-1" valueMember ="请添加" ><span class="combosle">请添加</span></div>'
-            +                '</div>'
-            +                '<p class="combobtnimg combobtnimg'+idd+'"><img id="dropDownButton-'+idd+'" class="comboBtnImg" src="images/downarrow.png"/></p>'
-            +            '</div>'
-            +            '<div id="combo_chooseItems'+idd+'" class="selectItemBox" answer ="comboselect">'
-            +                '<div class="combo_children"></div>'
-            +            '</div>'
-            +            '<div class="textAreaBox textAreaBox'+idd+'"><div class="textArea"><input type="text" id="infoInput-'+idd+'" placeholder="请输入发送内容" /></div></div>'
-            +            '<div class="sendArea sendArea'+idd+'"><img id="infoSend-'+idd+'" class="combosendimg" src="images/send.png"/></div>'
-            +        '</div>'
-            +    '</div>'
-            +'</div>'
-        );
-        textDiv.prependTo($('#content'));
-        var scrolTop = document.body.scrollTop;
-        var scrolLeft = document.body.scrollLeft;
-        //控件相关样式
-        $("#"+idd).css({
-            "position":"absolute",
-            "left": x +scrolLeft+"px",
-            "top": y +scrolTop +"px",
-            "width": 260 + "px",
-            "height": 38 + "px"
-        });
-        imp.fn(idd,x,y);
-        inItAllElementId.allElementsIds.push(idd);//添加到元素集合Id
-        inItSetCtrStyle.removeStyle(selecteId);
-        selecteId = [];
-        var AllElements = inItAllElementId.allElementsIds;
-        var _thisId = AllElements[AllElements.length-1];
-        selecteId.push(_thisId);
-        inItPropertiesPage.PropertiesBatchPage(selecteId);//控件的“控件”DOM结构
-        inItPropertiesPage.PublicFeatures(selecteId);//公共部分的功能
-        this.BatchPropertiesPage(selecteId);
-        this.BatchFeatures(selecteId);
-        inItSetCtrStyle.EditBox(selecteId);
-        inItSetCtrStyle.resized(selecteId);
-        inItSetCtrStyle.setStyle(selecteId);
-        inItModalFeature.Modalbox(selecteId);//配置变量
-    };
-    this.BatchPropertiesPage = function(idd){
-        //控件属性页
-        var batchT3Tab = $('<div id="tc3' + idd + '" class="tc33"></div>');
-        $("#right"+idd).siblings("p.page").remove();
-        $("#fathy").append(batchT3Tab);
-        var proAttributes = $(
-            '<fieldset class="attrs editattr">'+
-            '<legend>设置</legend>'+
-            '<div class="slider_attrText"><i>确认控制命令</i><div class="slider_attrDiv" id="pro2'+idd+'"></div></div>' +
-            '<div class="slider_attrText"><i>报告成功命令</i><div class="slider_attrDiv" id="pro3'+idd+'"></div></div>' +
-            '<div class="slider_attrText"><i>报告失败命令</i><div class="slider_attrDiv" id="pro4'+idd+'"></div></div>' +
-            '</fieldset>');
-        $('.tc33').append(proAttributes);
-    };
-    this.BatchFeatures = function(idd){
-        var controlObj = $('#'+idd);
-        var comboBtnImg = $(".combobtnimg" + idd);
-        var selectItemBox = $("#combo_chooseItems" + idd);
-        var selectOptionsIds = []; //所有被选中的元素变量ID
-        var confirmOrder = $("#pro2"+idd);
-        var successOrder = $("#pro3"+idd);
-        var failOrder = $("#pro4"+idd);
-        inItModalFeature.orderControlFeatures(confirmOrder, successOrder,failOrder, idd);
-        //控件下拉框的展示和隐藏
-        var comboSelect = {
-            comboBtn:function(){ //控件列表元素显示隐藏的切换
-                var len;
-                comboBtnImg.unbind("mousedown").bind("mousedown",function(e){
-                    e.stopPropagation();
-                    len = selectItemBox.children(".selectItem").length;
-                    if(len != 0){
-                        if(selectItemBox.children(".selectItem").is(":visible")){
-                            selectItemBox.slideUp(300);
-                        }else{
-                            selectItemBox.slideDown(300);
-                        }
-                    }else{
-                        return false;
-                    }
-                })
-            },
-            hideChooseItems:function(){//隐藏控件的列表元素
-                $("#bgDiv").bind("click",function(){
-                    var combo_chooseItems = $(".selectItemBox");
-                    combo_chooseItems.slideUp(300);
-                });
-            },
-            init:function(){
-                this.comboBtn();
-                this.hideChooseItems();
-            }
-        };
-        comboSelect.init();
-    };
-    this.copy = function(srcId, desId){
-        var srcIdElement = $('#'+srcId);
-        var desIdElement = $('#'+desId);
-
-    }
-};
-
+}

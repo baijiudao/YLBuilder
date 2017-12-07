@@ -83,26 +83,25 @@ var skinchange_ = function(){
 var skin = new skinchange_();
 /******************值班台接口******************/
 var set_modal = function(){//布局接口
-	setTimeout(function(){
-		$("body #header").remove();
-			$.each($("div[id^='Scene']"),function() {
-				var idd = $(this).attr("id").split("_")[0] + "_" + $(this).attr("id").split("_")[1];
-				var scenew = $("#" + idd).width() + 2;
-				$("#" + idd).css({
-					"position": "absolute",
-					"top": 0,
-					"left": 0,
-					"height": "100%"
-				});
-				$("#area", parent.document.body).css({
-					"position": "absolute",
-					"left": scenew-2,
-					"top": 0,
-					"height": "100%",
-					"width": "calc(100% - " + scenew + "px)"
-				});	
+	$("body #header").remove();
+	$.each($("div[id^='Scene']"),
+		function() {
+			var idd = $(this).attr("id").split("_")[0] + "_" + $(this).attr("id").split("_")[1];
+			var scenew = $("#" + idd).width() + 2;
+			$("#" + idd).css({
+				"position": "absolute",
+				"top": 0,
+				"left": 0,
+				"height": "100%"
 			});
-	},400);
+			$("#area", parent.document.body).css({
+				"position": "absolute",
+				"left": scenew-2,
+				"top": 0,
+				"height": "100%",
+				"width": "calc(100% - " + scenew + "px)"
+			});	
+		});
 }
 var Duty_station = function(s){	//换肤接口
 	skin.change(s);

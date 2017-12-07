@@ -271,8 +271,7 @@ fieldset{
 .charge input{
     height: 18px;
     width: 80px;    
-    border: 1px solid #aaa;
-    text-indent: 2px;
+     border: 1px solid #aaa;
 }
 /*==============text属性=================*/
 .text_attrP{
@@ -2196,9 +2195,6 @@ FontAwesome, sans-serif;}
 }
 .radioValue {
     width: 50px;
-}
-.radioValue_batch {
-    width: 60px;
 }
 .radioInput {
     width: 75px;
@@ -4400,15 +4396,8 @@ input.end::-webkit-calendar-picker-indicator {
     border-left:1px solid #999999;
     overflow:hidden;
 }
-.radioName_2{
-    padding-left: 2px;
-    overflow:hidden;
-}
 .radioValue1{
     width:50px;
-}
-.radioValue1_batch {
-    width:60px;
 }
 .radioName2{
     width:80px;
@@ -5124,6 +5113,7 @@ input.end::-webkit-calendar-picker-indicator {
     background-size:100% 100%;
     cursor: pointer;
 }
+
 .picList {
     margin-top: 25px;
 }
@@ -5823,147 +5813,4 @@ html{
 }
 .pip_d{
     margin-left:10px;
-}
-/***************组控控件*****************/
-.total_box {
-    width: 100%;
-    height: 100%;
-    border: 1px solid #C6C6C6;
-    border-radius: 5px;
-    background-color: #F0F0F0;
-    box-sizing: border-box;
-}
-.total_child {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-.selectAreaBox {
-    position: relative;
-    width: 45%;
-    height: 100%;
-    float: left;
-}
-.selectArea {
-    position: absolute;
-    height: calc(100% - 8px);
-    width: calc(100% - 4px);
-    border: 1px solid #C6C6C6;
-    background-color: #fff;
-    border-radius: 5px;
-    margin: auto;
-    box-sizing: border-box;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-}
-.selectArea span {
-    font-size: 12px;
-    text-indent: 5px;
-}
-.textAreaBox {
-    position: relative;
-    width: 45%;
-    height: 100%;
-    float: left;
-    box-sizing: border-box;
-}
-.textArea {
-    position: absolute;
-    height: calc(100% - 8px);
-    width: calc(100% - 4px);
-    border: 1px solid #C6C6C6;
-    background-color: #fff;
-    border-radius: 5px;
-    margin: auto;
-    box-sizing: border-box;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-}
-.textArea input {
-    font-size: 12px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    box-sizing: border-box;
-    text-indent: 5px;
-    width: 100%;
-    border: none;
-    height: 100%;
-    border-radius: 5px;
-}
-.sendArea {
-    float: left;
-    width: 10%;
-    height: 100%;
-    position: relative;
-    cursor: pointer;
-}
-.selectItemBox {
-    width: calc(45% - 6px);
-    position: absolute;
-    top: calc(100% - 5px);
-    left: calc(0% + 4px);
-    border: solid 1px #cecece;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    border-radius: 5px;
-    display: none;
-    z-index: 15;
-    background-color: #fff;
-}
-.selectItem {
-    font-size: 12px;
-    padding: 3px;
-    border-bottom: solid 1px #cecece;
-    overflow: hidden;
-    position: relative;
-    z-index: 15;
-    height: 16px;
-}
-.selectItemBox .selectItem:last-child{
-    border-bottom:none;
-}
-.selectItemBox .selectItem:hover{
-    background: #ebf2fc;
-}
-.selectItemBox .selectItem:last-child:hover{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-.selectItemBox .selectItem:first-child:hover{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-.selectItemChild {
-    width: 100%;
-    height: 100%;
-}
-.selectItemChild img {
-    display: inline-block;
-    float: right;
-    cursor: pointer;
-}
-.selectItemChild label {
-    display: inline-block;
-    float: left;
-    width: 80%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
-.selectAll {
-    font-size: 12px;
-    padding: 3px;
-    border-bottom: solid 1px #cecece;
-    overflow: hidden;
-    position: relative;
-    z-index: 15;
-    height: 16px;
 }

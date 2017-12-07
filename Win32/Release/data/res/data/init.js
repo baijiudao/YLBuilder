@@ -65,8 +65,6 @@ var inItRemovalshitcateControl = new RemovalshitControl();
 var inItVideoControl = new VideoControl();
 //管道控件
 var inItPipelineControl = new Pipeline();
-//组控控件
-var inItBatchControl = new BatchControl();
 //组合控件
 //var inItassembleControl = new assembleControl();
 //单多选

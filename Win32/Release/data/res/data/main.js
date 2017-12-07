@@ -195,13 +195,6 @@ var AllElementId = function(){
         });
         return Math.max.apply(null, arrNum);
     };
-    this.batchElementIDMaxNum = function(){
-        var arrNum = [];
-        $.each($("div[id^='Batch']"),function(){
-            arrNum.push(parseInt($(this).attr("id").split("_")[1]));
-        });
-        return Math.max.apply(null, arrNum);
-    };
     this.recordAllElementID = function(){
         var allElements = [];
         //函数，遍历所有元素，放入元素Id集
@@ -935,9 +928,6 @@ var SelectMode = function(){
                         if(_thisId.split("_")[0] == "Chart"){
                             inItPropertiesPage.PropertiesChartPage(selecteId);
                             inItPropertiesPage.PublicFeatures(selecteId);
-                        }else if(_thisId.split("_")[0] == "Batch"){
-                            inItPropertiesPage.PropertiesBatchPage(selecteId);
-                            inItPropertiesPage.PublicFeatures(selecteId);
                         }else{
                             inItPropertiesPage.PropertiesPage(selecteId);
                             inItPropertiesPage.PublicFeatures(selecteId);
@@ -1216,9 +1206,6 @@ var Show = function() {
         //初始化配置变量
         var contorl = $("#"+idd);
         var ChartTag = $(".radioBox"+idd);
-        var variName = $('#variName'+idd);
-        var variCount = $('#variCount'+idd);
-        var count;
         if(idd[0].split("_")[0] == "Chart"){
             var o = contorl.attr("variableID");
             if(o != undefined){
@@ -1262,36 +1249,7 @@ var Show = function() {
                     }
                 })
             })
-        } else if (idd[0].split("_")[0] == "Batch") {
-            var _ID = contorl.attr("variableID");
-            if(_ID != undefined){
-                var _variableType = contorl.attr("variableType");
-                var _variableName = contorl.attr("variableName");
-                var _MinEuVal = contorl.attr("MinEuVal");
-                var _MixEuVal = contorl.attr("MiXEuVal");
-                var _variableID = contorl.attr("variableID");
-                var _dataName = contorl.attr("dataName");
-                var _dataCount = contorl.attr("variCount");
-                var _variableTypeA = _variableType.split(",");
-                var _variableNameA = _variableName.split(",");
-                var _MinEuValA = _MinEuVal.split(",");
-                var _MixEuValA = _MixEuVal.split(",");
-                var _variableIDA = _variableID.split(",");
-                var _dataNameA = _dataName.split(",");
-                for(var i=0;i<parseInt(_dataCount);i++){
-                    var TagMsg = $(
-                        '<ul class="chartlistdata">'+
-                        '<li class="radioName1 radioName_2 variableName'+idd+'">'+ _dataNameA[i] +'</li>'+
-                        '<li class="radioValue1_batch variableID'+idd+'" name="'+_variableNameA[i]+'">'+ _variableIDA[i] +'</li>'+
-                        '<li class="radioName1 variableType'+idd+'">'+ _variableTypeA[i] +'</li>'+
-                        '<li class="radioName1 variableMin'+idd+'">'+ _MinEuValA[i] +'</li>'+
-                        '<li class="radioName2 variableMix'+idd+'">'+ _MixEuValA[i] +'</li>'+
-                        '</ul>');
-                    ChartTag.append(TagMsg);
-                }
-                $('#variCount'+idd).val(_dataCount);
-            }
-        } else{
+        }else{
             if(idd[0].split("_")[0] == "Elevator"){
                 $("#variableType"+idd).val(contorl.attr("variableType0"));
                 $("#variableName"+idd).val(contorl.attr("variableName0"));
@@ -1316,202 +1274,45 @@ var Show = function() {
         /*******上移功能********/
         $('.radioUp'+idd).click(function() {
             if ($('#'+idd).attr('radio') == 'select') {
-                var selectItem = $("ul.chartlistdata[select='selected']");
-                var prevthis_ = selectItem.prev("ul.chartlistdata");
-                selectItem.insertBefore(prevthis_);
-                if (idd[0].split("_")[0] == "Batch") {
-                    //控件部分
-                    var selectVariId = selectItem.children('li').eq(1).text();
-                    var selectItemDom;
-                    var prevItemDom;
-                    $('#combo_chooseItems'+idd+' div.selectItem').each(function() {
-                        if ($(this).find('label').attr('displayMember') == selectVariId) {
-                            selectItemDom = $(this);
-                            prevItemDom = $(this).prev('div.selectItem');
-                        }
-                    });
-                    selectItemDom.insertBefore(prevItemDom);
-                }
+                var prevthis_ = $("ul.chartlistdata[select='selected']").prev("ul.chartlistdata");
+                $("ul.chartlistdata[select='selected'] ").insertBefore(prevthis_);
             }
         });
         /*******下移功能********/
         $('.radioDown'+idd).click(function() {
             if ($('#'+idd).attr('radio') == 'select') {
-                var selectItem = $("ul.chartlistdata[select='selected']");
-                var nextthis_ = selectItem.next("ul.chartlistdata");
-                selectItem.insertAfter(nextthis_);
-                if (idd[0].split("_")[0] == "Batch") {
-                    //控件部分
-                    var selectVariId = selectItem.children('li').eq(1).text();
-                    var selectItemDom;
-                    var nextItemDom;
-                    $('#combo_chooseItems'+idd+' div.selectItem').each(function() {
-                        if ($(this).find('label').attr('displayMember') == selectVariId) {
-                            selectItemDom = $(this);
-                            nextItemDom = $(this).next('div.selectItem');
-                        }
-                    });
-                    selectItemDom.insertAfter(nextItemDom);
-                }
+                var nextthis_ = $("ul.chartlistdata[select='selected']").next("ul.chartlistdata");
+                $("ul.chartlistdata[select='selected']").insertAfter(nextthis_);
             }
         });
         /*******删除功能********/
         $('.radioMove'+idd).click(function() {
             if ($('#'+idd).attr('radio') == 'select') {
-                if (idd[0].split("_")[0] == "Chart") {
-                    var chartid = $("ul.chartlistdata[select='selected'] li.variableID"+idd+"").text();
-                    var chartc = $("#"+idd).attr("datacolor").split(",");
-                    var chartn = $("#"+idd).attr("variablename").split(",");
-                    var chari = $("#"+idd).attr("variableid").split(",");
-                    var chartt = $("#"+idd).attr("variabletype").split(",");
-                    var chartma = $("#"+idd).attr("variablemix").split(",");
-                    var chartmi = $("#"+idd).attr("variablemin").split(",");
-                    var len = $("#"+idd).attr("variableid").split(",").length;
-                    var index = chari.indexOf(chartid);
-                    chartc.splice(index,1);
-                    chartn.splice(index,1);
-                    chari.splice(index,1);
-                    chartt.splice(index,1);
-                    chartma.splice(index,1);
-                    chartmi.splice(index,1);
-                    $("#"+idd).attr("datacolor",chartc);
-                    $("#"+idd).attr("variablename",chartn);
-                    $("#"+idd).attr("variableid",chari);
-                    $("#"+idd).attr("variabletype",chartt);
-                    $("#"+idd).attr("variablemix",chartma);
-                    $("#"+idd).attr("variablemin",chartmi);
-                    $("ul.chartlistdata[select='selected']").remove();
-                } else if (idd[0].split("_")[0] == "Batch") {
-                    var variSelectId = $("ul.chartlistdata[select='selected'] li.variableID"+idd+"").text(); //已选中项的变量ID
-                    var variId = contorl.attr('variableId').split(',');
-                    var variName = contorl.attr('variableName').split(',');
-                    var variMax = contorl.attr('MiXEuVal').split(',');
-                    var variMin = contorl.attr('MinEuVal').split(',');
-                    var variDataName = contorl.attr('dataName').split(',');
-                    var variCount = contorl.attr('variCount');
-                    var _index = variId.indexOf(variSelectId);
-                    variId.splice(_index, 1);
-                    variName.splice(_index, 1);
-                    variMax.splice(_index, 1);
-                    variMin.splice(_index, 1);
-                    variDataName.splice(_index, 1);
-                    variCount = variCount - 1;
-                    contorl.attr('variableId', variId);
-                    contorl.attr('variableName', variName);
-                    contorl.attr('MiXEuVal', variMax);
-                    contorl.attr('MinEuVal', variMin);
-                    contorl.attr('dataName', variDataName);
-                    contorl.attr('variCount', variCount);
-                    $("ul.chartlistdata[select='selected']").remove();
-                    $('#variCount'+idd).val(variCount);
-                    var selectItemDom;
-                    $('#combo_chooseItems'+idd+' div.selectItem').each(function() {
-                        if ($(this).find('label').attr('displayMember') == variSelectId) {
-                            selectItemDom = $(this);
-                        }
-                    });
-                    selectItemDom.remove();
-                }
+                var chartid = $("ul.chartlistdata[select='selected'] li.variableID"+idd+"").text();
+                var chartc = $("#"+idd).attr("datacolor").split(",");
+                var chartn = $("#"+idd).attr("variablename").split(",");
+                var chari = $("#"+idd).attr("variableid").split(",");
+                var chartt = $("#"+idd).attr("variabletype").split(",");
+                var chartma = $("#"+idd).attr("variablemix").split(",");
+                var chartmi = $("#"+idd).attr("variablemin").split(",");
+                var len = $("#"+idd).attr("variableid").split(",").length;
+                var index = chari.indexOf(chartid);
+                chartc.splice(index,1);
+                chartn.splice(index,1);
+                chari.splice(index,1);
+                chartt.splice(index,1);
+                chartma.splice(index,1);
+                chartmi.splice(index,1);
+                $("#"+idd).attr("datacolor",chartc);
+                $("#"+idd).attr("variablename",chartn);
+                $("#"+idd).attr("variableid",chari);
+                $("#"+idd).attr("variabletype",chartt);
+                $("#"+idd).attr("variablemix",chartma);
+                $("#"+idd).attr("variablemin",chartmi);
+                $("ul.chartlistdata[select='selected']").remove();
             }
             if ($("ul.chartlistdata[select='selected']").length === 0) {
                 $('#'+idd).removeAttr('radio');
-            }
-        });
-        /*******添加功能********/
-        $('.radioAdd'+idd).bind('mousedown', function() {
-            count = $('.radioBox'+idd).find('ul').length + 1;
-        });
-        $('.radioAdd'+idd).bind('mouseup', function() {
-            var variableIdEle = $("#variableId"+idd);
-            var variableTypeEle = $("#variableType"+idd);
-            var variableNameEle = $("#variableName"+idd);
-            var MinEuValEle = $("#MinEuVal"+idd);
-            var MixEuValEle = $("#MiXEuVal"+idd);
-            var dataName = []; //数据项名称
-            var variableID = [];
-            var variableName = [];
-            var variableType = [];
-            var MixEuVal = [];
-            var MinEuVal = [];
-            var variNameValue = variName.val();
-            var variableIdEleValue = variableIdEle.val();
-            var variInfoBox = $('.radioBox'+idd);
-            if (count <= 1 || (contorl.attr('variableID').split(',').indexOf(variableIdEleValue) == -1 && contorl.attr('variableType').split(',').indexOf(variableTypeEle.val()) != -1)) {
-                if (variNameValue != '' && variableIdEleValue != '') {
-                    var TagMsg = $(
-                        '<ul class="chartlistdata">'+
-                        '<li class="radioName1 radioName_2 variableName'+idd+'">'+ variNameValue +'</li>'+
-                        '<li class="radioValue1_batch variableID'+idd+'" name="'+variableNameEle.val()+'">'+ variableIdEleValue +'</li>'+
-                        '<li class="radioName1 variableType'+idd+'">'+ variableTypeEle.val() +'</li>'+
-                        '<li class="radioName1 variableMin'+idd+'">'+ MinEuValEle.val() +'</li>'+
-                        '<li class="radioName2 variableMix'+idd+'">'+ MixEuValEle.val() +'</li>'+
-                        '</ul>');
-                    variInfoBox.append(TagMsg);
-                    contorl.attr("dataName", variNameValue);
-                    contorl.attr('variCount', count);
-                    variCount.val(count);
-                    var selectItemBox = $('#combo_chooseItems'+idd); //控件上存放添加项的DOM节点
-                    var listDom = '<div class="selectItem listdom'+count+'">' +
-                        '<div class="selectItemChild">' +
-                            '<label valueMember="'+variNameValue+'" displayMember="'+variableIdEleValue+'" title="'+variNameValue+'">'+variNameValue+'</label>' +
-                            '<img src="images/unchecked_checkbox.png"/>' +
-                        '</div>' +
-                    '</div>';
-                    selectItemBox.append(listDom);
-                    selectItemBox.css("display","block");
-                    if(selectItemBox.children(".selectItem").length === 1 && selectItemBox.children(".selectAll").length == 0){
-                        var select_inputElement = $("#comboselect"+idd).find("span");
-                        var totalSpan = '<div class="selectAll selectAll'+idd+'"><div class="selectItemChild"><label>全选</label><img src="images/unchecked_checkbox.png"/></div></div>';
-                        $(totalSpan).insertAfter(selectItemBox.find('.combo_children'));
-                        select_inputElement.text('请选择');
-                    }
-                    variName.val('');
-                    variableIdEle.val('');
-                    variableTypeEle.val('');
-                    variableNameEle.val('');
-                    MixEuValEle.val('');
-                    MinEuValEle.val('');
-                    if (variInfoBox.find('ul').length >= 1) {
-                        variInfoBox.find('.variableName'+idd+'').each(function(){
-                            var name = $(this).text();
-                            dataName.push(name);
-                            contorl.attr("dataName",dataName);
-                        });
-                        variInfoBox.find('.variableID'+idd+'').each(function(){
-                            var name = $(this).attr('name');
-                            variableName.push(name);
-                            contorl.attr("variableName",variableName);
-                        });
-                        variInfoBox.find('.variableID'+idd+'').each(function(){
-                            var Id = $(this).text();
-                            variableID.push(Id);
-                            contorl.attr("variableID",variableID);
-                        });
-                        variInfoBox.find('.variableType'+idd+'').each(function(){
-                            var Type = $(this).text();
-                            variableType.push(Type);
-                            contorl.attr("variableType",variableType);
-                        });
-                        variInfoBox.find('.variableMix'+idd+'').each(function(){
-                            var Mix = $(this).text();
-                            MixEuVal.push(Mix);
-                            contorl.attr("MixEuVal",MixEuVal);
-                        });
-                        variInfoBox.find('.variableMin'+idd+'').each(function(){
-                            var Min = $(this).text();
-                            MinEuVal.push(Min);
-                            contorl.attr("MinEuVal",MinEuVal);
-                        });
-                    }
-                }
-            } else {
-                variName.val('');
-                variableIdEle.val('');
-                variableTypeEle.val('');
-                variableNameEle.val('');
-                MixEuValEle.val('');
-                MinEuValEle.val('');
-                alert("亲,同一控件配置的变量重复啦/配置的变量类型不一致！");
             }
         });
         /**********导航切换************/
@@ -1803,7 +1604,7 @@ var Show = function() {
             webapi.addLog('after',afterLog);
         });
     };
-    /**********配置图表控件多变量*********/
+    /**********配置多变量*********/
     this.PropertiesChartPage = function(idd){ //对图表控件的配置多变量
         var chartrightt = $('<p id=right' + idd + ' class="page hidden"></p>');
         var charttab =$('<div class="tab"><ul class="pills"><li class="tive' + idd + ' mao active" value="tc1' + idd + '"><a>常规</a></li><li value="tc2' + idd + '" class="tive' + idd + ' add mao act' + idd + '"><a>控制</a></li><li value="tc3'+idd+'" class="tive'+idd+' mao"><a>属性</a></li></ul><div id="fathy"><div id="tc1' + idd + '" class="tc11"><ul class="area"><li><fieldset><legend>位置与尺寸</legend><ul class="U1"><li class="dll dll1"><span>X</span><ul class="posSize posSize'+idd+'" ><li class="numL'+idd+'"> <div class="picL"></div></li><li><input type="text" id=X' + idd + ' class="puu' + idd + ' put put1" step="3" value="0" /></li><li class="numB'+idd+'"><div class="picR"></div></li></ul></li><li class="dll dll1"><span>高</span><ul class="posSize posSize'+idd+'" ><li class="numL'+idd+'"> <div class="picL"></div></li><li><input type="text" id=put1' + idd + ' class="puu' + idd + ' put put2" required step="3" value="0" /></li><li class="numB'+idd+'"><div class="picR"></div></li></ul></li><li class="dll dll1"><span>Y</span><ul class="posSize posSize'+idd+'" ><li class="numL'+idd+'"> <div class="picL"></div></li><li><input type="text" id=Y' + idd + ' class="puu' + idd + ' put put1" required type="number" step="3" value="0" /></li><li class="numB'+idd+'"><div class="picR"></div></li></ul></li><li class="dll dll1"><span>宽</span><ul class="posSize posSize'+idd+'" ><li class="numL'+idd+'"> <div class="picL"></div></li><li><input type="text" id="put2' + idd + '" class="puu' + idd + ' put put3" required step="3" value="0" /></li><li class="numB'+idd+'"><div class="picR"></div></li></ul></li></ul></fieldset></li><li><fieldset class="effect"><legend>风格效果</legend><ul class="U2"><li><div>平面效果</div><div class="huan" id="ping'+idd+'"></div><div class="jia1'+idd+'"></div></li><li><div>凸出效果</div><div class="huan" id="tu'+idd+'"></div><div class="jia2'+idd+'"></div></li><li><div>凹陷效果</div><div class="huan" id="ao'+idd+'"></div><div class="jia3'+idd+'"></div></li></ul></fieldset></li></ul></div><div id="tc2' + idd + '" class="tc22"><fieldset class="charge"><legend>变量修改</legend><ul><li><p >配置变量</p><button type="button" id="Config'+idd+'" class="config_">选择文件</button></li></ul>'+
@@ -1829,72 +1630,6 @@ var Show = function() {
                                 '</div>'+
                             '</div>' +
             '</fieldset></div></div></div>');
-        $("#right"+idd).siblings("p.page").remove();
-        charttab.appendTo(chartrightt);
-        chartrightt.prependTo($('#content'));
-        var scroltop = document.body.scrollTop;
-        $("#right" + idd).css({
-            "position": "absolute",
-            "top": scroltop +'px',
-            "right": 0,
-            "z-index": "900"
-        });
-    };
-    /**********配置组控控件多变量*********/
-    this.PropertiesBatchPage = function(idd) {
-        var chartrightt = $('<p id=right' + idd + ' class="page hidden"></p>');
-        var charttab =$(
-            '<div class="tab">' +
-                '<ul class="pills">' +
-                    '<li class="tive' + idd + ' mao active" value="tc1' + idd + '"><a>常规</a></li>' +
-                    '<li value="tc2' + idd + '" class="tive' + idd + ' add mao act' + idd + '"><a>控制</a></li>' +
-                    '<li value="tc3'+idd+'" class="tive'+idd+' mao"><a>属性</a></li>' +
-                '</ul>' +
-                '<div id="fathy">' +
-                    '<div id="tc1' + idd + '" class="tc11"><ul class="area"><li><fieldset><legend>位置与尺寸</legend><ul class="U1"><li class="dll dll1"><span>X</span><ul class="posSize posSize'+idd+'" ><li class="numL'+idd+'"> <div class="picL"></div></li><li><input type="text" id=X' + idd + ' class="puu' + idd + ' put put1" step="3" value="0" /></li><li class="numB'+idd+'"><div class="picR"></div></li></ul></li><li class="dll dll1"><span>高</span><ul class="posSize posSize'+idd+'" ><li class="numL'+idd+'"> <div class="picL"></div></li><li><input type="text" id=put1' + idd + ' class="puu' + idd + ' put put2" required step="3" value="0" /></li><li class="numB'+idd+'"><div class="picR"></div></li></ul></li><li class="dll dll1"><span>Y</span><ul class="posSize posSize'+idd+'" ><li class="numL'+idd+'"> <div class="picL"></div></li><li><input type="text" id=Y' + idd + ' class="puu' + idd + ' put put1" required type="number" step="3" value="0" /></li><li class="numB'+idd+'"><div class="picR"></div></li></ul></li><li class="dll dll1"><span>宽</span><ul class="posSize posSize'+idd+'" ><li class="numL'+idd+'"> <div class="picL"></div></li><li><input type="text" id="put2' + idd + '" class="puu' + idd + ' put put3" required step="3" value="0" /></li><li class="numB'+idd+'"><div class="picR"></div></li></ul></li></ul></fieldset></li><li><fieldset class="effect"><legend>风格效果</legend><ul class="U2"><li><div>平面效果</div><div class="huan" id="ping'+idd+'"></div><div class="jia1'+idd+'"></div></li><li><div>凸出效果</div><div class="huan" id="tu'+idd+'"></div><div class="jia2'+idd+'"></div></li><li><div>凹陷效果</div><div class="huan" id="ao'+idd+'"></div><div class="jia3'+idd+'"></div></li></ul></fieldset></li></ul></div>' +
-                    '<div id="tc2' + idd + '" class="tc22">' +
-                        '<fieldset class="charge">' +
-                            '<legend>变量修改</legend>' +
-                            '<ul>' +
-                                '<li><p>配置变量</p><button type="button" id="Config'+idd+'" class="config_">选择文件</button></li>' +
-                                '<li><p>变量ID</p><input class="config_dis'+idd+'" type="text" name="" id="variableId'+idd+'" value="" disabled="true"/></li>' +
-                                '<li><p>变量名称</p><input class="config_dis'+idd+'" type="text" name="" id="variableName'+idd+'" value=""  disabled="true"/></li>' +
-                                '<li><p>类型</p><input class="config_dis'+idd+'" type="text" name="" id="variableType'+idd+'" value=""  disabled="true"/></li>' +
-                                '<li><p>最大工程值</p> <input type="text" name="" class="config_dis'+idd+'" id="MiXEuVal'+idd+'" value=""  disabled="true"/></li>' +
-                                '<li><p>最小工程值 </p><input type="text" name="" class="config_dis'+idd+'" id="MinEuVal'+idd+'" value=""  disabled="true"/></li>' +
-                                '<li><p>数据项名称</p><input id="variName'+idd+'" type="text"/></li>' +
-                                '<li><p>数据项个数</p><input id="variCount'+idd+'" type="text" value="0" disabled="true"/></li>' +
-                            '</ul>'+
-                            '<div class="radioDataBox chartdatabox">' +
-                                '<div class="chartcofigbox">'+
-                                    '<div class="radioDiv chartDiv">' +
-                                        '<span class="radioName chartName">数据项名称</span>' +
-                                        '<span class="radioValue_batch">变量ID</span>' +
-                                        '<span class="radioName">类型</span>' +
-                                        '<span class="radioName">最小值</span>' +
-                                        '<span class="radioName radioName2">最大值</span>'+
-                                    '</div>' +
-                                    '<div class="radioBox chartBox radioBox' + idd + '">'+
-                                        // '<ul class="chartlistdata">'+
-                                        //     '<li class="radioNumber1"><input type="color" class="chartcofigcolor"/></li>'+
-                                        //     '<li class="radioName1 radioName_1">123</li>'+
-                                        //     '<li class="radioValue1">456</li>'+
-                                        //     '<li class="radioName1">789</li>'+
-                                        //     '<li class="radioName1">741</li>'+
-                                        //     '<li class="radioName2">852</li>'+
-                                        // '</ul>'+
-                                    '</div>' +
-                                '</div>'+
-                                '<div class="radioDiv">' +
-                                    '<span class="radioAdd'+idd+'">添加</span>' +
-                                    '<span class="radioUp'+idd+'">上移</span>' +
-                                    '<span class="radioDown'+idd+'">下移</span>' +
-                                    '<span class="radioMove'+idd+'">删除</span>' +
-                                '</div>'+
-                            '</div>' +
-                        '</fieldset>' +
-                    '</div>' +
-                '</div></div>');
         $("#right"+idd).siblings("p.page").remove();
         charttab.appendTo(chartrightt);
         chartrightt.prependTo($('#content'));
@@ -2988,23 +2723,20 @@ var ModalFeature = function(){ //模态框定义
                             "DataComment0":oCommentVal
                         });
                     }else{
-                        $("#variableId"+idd).val(oIdVal);
                         $("#variableName"+idd).val(oNameVal);
                         $("#MiXEuVal"+idd).val(oMixVal);
                         $("#MinEuVal"+idd).val(oMinVal);
                         $("#DataComment"+idd).val(oCommentVal);
                         $("#variableType"+idd).val(oTypeVal);
-                        if (idd[0].split("_")[0] != "Batch") {
-                            control.attr({
-                                "DataBaseProp":DataBaseProp,
-                                "variableID":oIdVal,
-                                "variableName":oNameVal,
-                                "variableType":oTypeVal,
-                                "MiXEuVal":oMixVal,
-                                "MinEuVal":oMinVal,
-                                "DataComment":oCommentVal
-                            });
-                        }
+                        control.attr({
+							"DataBaseProp":DataBaseProp,
+                            "variableID":oIdVal,
+                            "variableName":oNameVal,
+                            "variableType":oTypeVal,
+                            "MiXEuVal":oMixVal,
+                            "MinEuVal":oMinVal,
+                            "DataComment":oCommentVal
+                        });
                     }
                     domal.remove();
                     wrap.remove();

@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Controls>
-    <Control Type="batch" Icon="\data\res\Controls\TableIcon\Pip.png" DragPic="data\res\Controls\DragPic\Pip.png">组控</Control>
     <Control Type="pip" Icon="\data\res\Controls\TableIcon\Pip.png" DragPic="data\res\Controls\DragPic\Pip.png">管道控件</Control>
     <Control Type="video" Icon="\data\res\Controls\TableIcon\Video.png" DragPic="data\res\Controls\DragPic\Video.png">通用视频控件</Control>
     <Control Type="removalshit" Icon="\data\res\Controls\TableIcon\Removalshit.png" DragPic="data\res\Controls\DragPic\Removalshit.png">移动场景导航</Control>

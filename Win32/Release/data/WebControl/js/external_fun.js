@@ -90,71 +90,73 @@ $(function(){
         document.getElementsByTagName("head")[0].appendChild(hkvideo_js);
     }
 	(function(){
-    	//添加模板
-    	var addtemplate = function() {
-    		if (inItWebMode.editMode == false) {
-    			$.each($("div[id^='Scene']"),
-    			function() {
-    				$(this).siblings("div.contrl").remove();
-    				$("#header").remove();
-    				$("#area").remove();
-    				$("#bgDiv").remove();
-    				var idd = $(this).attr("id").split("_")[0] + "_" + $(this).attr("id").split("_")[1];
-    				var tempdom = $('<div id="header">' + '<iframe id="top" frameborder="0" scrolling="no" src="login.html" name="top"></iframe>' + '</div>' + '<div id="area">' + '<iframe id="right" frameborder="1" scrolling="yes" src="right.html" name="right"  allowFullScreen="true"></iframe>' + '</div>');
-    				$("body").append(tempdom);
-    				var scenew = $("#" + idd).width() + 2;
-    				$("body").css({
-    					"position": "static",
-    					"overflow": "hidden"
-    				});
-    				$("#" + idd).css({
-    					"position": "absolute",
-    					"top": 59 + "px",
-    					"left": 0,
-    					"height": "100%"
-    				});
-    				$("#area", parent.document.body).css({
-    					"position": "absolute",
-    					"left": scenew-2,
-    					"top": 59 + "px",
-    					"height": "calc(100% - 59px)",
-    					"width": "calc(100% - " + scenew + "px)"
-    				});
-    			});
-    		}
-    	};
-        setTimeout(function(){
-            addtemplate();
-        },200);
-    	//F5刷新工作区框架集
-    	function disableF5(event) {
-    		if (event) {
-    			var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
-    			if (keyCode == 116) {
-    				event.keyCode = 0;
-    				event.returnValue = false;
-    				var src = $("#navBox", parent.document).find("a[currentpage = 'currentpage']").attr("src");
-    				if(src != undefined){
-    					$("#right",parent.document.body).attr("src",src);  
-    				}
-    				return false
-    			}
-    		}
-    	};
-    	document.onkeydown = disableF5;
-    	
-    	//关闭页面时的接口
-    	var closeHtml = function(){
-    		var CommunicateObj = $("div[id ^= 'Communicate']");
-    		var len = CommunicateObj.length;
-    		if(len >= 1){
-    			Websocket.send(logoutSendData());
-    			CommunicateObj.each(function(){
-    				$(this).remove();
-    			})
-    		}
-    	};
-    })()
+	//添加模板
+	var addtemplate = function() {
+		if (inItWebMode.editMode == false) {
+			$.each($("div[id^='Scene']"),
+			function() {
+				$(this).siblings("div.contrl").remove();
+				$("#header").remove();
+				$("#area").remove();
+				$("#bgDiv").remove();
+				var idd = $(this).attr("id").split("_")[0] + "_" + $(this).attr("id").split("_")[1];
+				var tempdom = $('<div id="header">' + '<iframe id="top" frameborder="0" scrolling="no" src="login.html" name="top"></iframe>' + '</div>' + '<div id="area">' + '<iframe id="right" frameborder="1" scrolling="yes" src="right.html" name="right"  allowFullScreen="true"></iframe>' + '</div>');
+				$("body").append(tempdom);
+				var scenew = $("#" + idd).width() + 2;
+				$("body").css({
+					"position": "static",
+					"overflow": "hidden"
+				});
+				$("#" + idd).css({
+					"position": "absolute",
+					"top": 59 + "px",
+					"left": 0,
+					"height": "100%"
+				});
+				$("#area", parent.document.body).css({
+					"position": "absolute",
+					"left": scenew-2,
+					"top": 59 + "px",
+					"height": "calc(100% - 59px)",
+					"width": "calc(100% - " + scenew + "px)"
+				});
+			
+			});
+		}
+	};
+	setTimeout(function(){
+		addtemplate();
+	},500);
+	//F5刷新工作区框架集
+	function disableF5(event) {
+		if (event) {
+			var keyCode = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+			if (keyCode == 116) {
+				event.keyCode = 0;
+				event.returnValue = false;
+				var src = $("#navBox", parent.document).find("a[currentpage = 'currentpage']").attr("src");
+				if(src != undefined){
+					$("#right",parent.document.body).attr("src",src);  
+				}
+				return false
+			}
+		}
+	};
+	document.onkeydown = disableF5;
+	
+	//关闭页面时的接口
+	var closeHtml = function(){
+		var CommunicateObj = $("div[id ^= 'Communicate']");
+		var len = CommunicateObj.length;
+		if(len >= 1){
+			Websocket.send(logoutSendData());
+			CommunicateObj.each(function(){
+				$(this).remove();
+			})
+		}
+	};
+
+})()
 });
 
  

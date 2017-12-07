@@ -145,14 +145,9 @@ function addControl(val,x,y){ //addControl('text',0,0);
                 break;
             case 'pip':
                 inItPipelineControl.createPipelineControl(x,y);
-                var alarmLog = inTtCommand.createLog();
-                webapi.addLog('create',alarmLog);
-                break;
-            case 'batch':
-                inItBatchControl.createBatchControl(x, y);
-                var alarmLog = inTtCommand.createLog();
-                webapi.addLog('create',alarmLog);
-                break;
+		var alarmLog = inTtCommand.createLog();
+		webapi.addLog('create',alarmLog);
+		 break;
             default:false;
         }
     }else{

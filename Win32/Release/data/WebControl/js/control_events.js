@@ -3,16 +3,11 @@ var starttime;
 var endtime;
 var limittime;
 $(function(){
-    /***************模态窗*******************/
+	/***************模态窗*******************/
     var ModalSend = function() {
-        this.modelPage = function(idd) {
+        this.modelPage = function() {
             /****************发送数据模态窗*******************/
-            var modelDom;
-            if (idd) {
-                modelDom = '<div class="model modalmove">' + '<div class="modelmove">' + '<div class="modelhead">' + '<div class="lf">命令发送</div>' + '<div class="rt modelclose">X</div>' + '</div>' + '</div>' + '<div class="modelline"></div>' + '<div class="modellist"><div class="lf">变量个数</div><input type="text" class="rt sty ename" disabled></div>' + '<div class="modellist"><div class="lf">变量类型</div><input type="text" class="rt sty etype" disabled></div>' + '<div class="modellist"><div class="lf">下发值</div><input type="text" class="rt sty eval" disabled></div>' + '<div class="modelfoot rt">' + '<button class="modelbtn modelsure">发送</button>' + '<button class="modelbtn modelcancel">取消</button>' + '</div>' + '</div>';
-            } else {
-                modelDom = '<div class="model modalmove">' + '<div class="modelmove">' + '<div class="modelhead">' + '<div class="lf">命令发送</div>' + '<div class="rt modelclose">X</div>' + '</div>' + '</div>' + '<div class="modelline"></div>' + '<div class="modellist"><div class="lf">变量名称</div><input type="text" class="rt sty ename" disabled></div>' + '<div class="modellist"><div class="lf">变量类型</div><input type="text" class="rt sty etype" disabled></div>' + '<div class="modellist"><div class="lf">下发值</div><input type="text" class="rt sty eval" disabled></div>' + '<div class="modelfoot rt">' + '<button class="modelbtn modelsure">发送</button>' + '<button class="modelbtn modelcancel">取消</button>' + '</div>' + '</div>';
-            }
+            var modelDom = '<div class="model modalmove">' + '<div class="modelmove">' + '<div class="modelhead">' + '<div class="lf">命令发送</div>' + '<div class="rt modelclose">X</div>' + '</div>' + '</div>' + '<div class="modelline"></div>' + '<div class="modellist"><div class="lf">变量名称</div><input type="text" class="rt sty ename" disabled></div>' + '<div class="modellist"><div class="lf">变量类型</div><input type="text" class="rt sty etype" disabled></div>' + '<div class="modellist"><div class="lf">下发值</div><input type="text" class="rt sty eval" disabled></div>' + '<div class="modelfoot rt">' + '<button class="modelbtn modelsure">发送</button>' + '<button class="modelbtn modelcancel">取消</button>' + '</div>' + '</div>';
             $("body").append(modelDom);
             var modal = $(".model");
             modal.wrap("<div class='wrapp'></div>");
@@ -121,13 +116,8 @@ $(function(){
                 return false;
             });
             /*************发送命令功能**********/
-            var name;
-            var type = $("#" + idd).attr("variabletype").split(',')[0];
-            if (idd.split('_')[0] == 'Batch') {
-                name = $("#" + idd).attr("selectoptionsids").split(',').length;
-            } else {
-                name = $("#" + idd).attr("variablename");
-            }
+            var name = $("#" + idd).attr("variablename");
+            var type = $("#" + idd).attr("variabletype");
             $(".modelclose").unbind("click").bind("click",
             function() {
                 if (isClick) {
@@ -3487,175 +3477,6 @@ $(function(){
                 }
             });
         },
-    //组控控件
-    batch: function() {
-        $.each($("img[id^='dropDownButton']"), function() {
-            var idd = $(this).attr('id').split('-')[1];
-            var controlObj = $('#'+idd);
-            var comboBtnImg = $(".combobtnimg" + idd);
-            var selectItemBox = $("#combo_chooseItems" + idd);
-            var selectOptionsIds = []; //所有被选中的元素变量ID
-            var comboSelect = {
-                comboBtn: function() { //控件列表元素显示隐藏的切换
-                    var len;
-                    comboBtnImg.unbind("mousedown").bind("mousedown", function(e) {
-                            if (inItWebMode.editMode == false) {
-                                e.stopPropagation();
-                                len = selectItemBox.children(".selectItem").length;
-                                if (len != 0) {
-                                    if (selectItemBox.children(".selectItem").is(":visible")) {
-                                        selectItemBox.slideUp(300);
-                                    } else {
-                                        selectItemBox.slideDown(300);
-                                        $("#" + idd).css("z-index", 100);
-                                    }
-                                } else {
-                                    return false;
-                                }
-                            }
-                        })
-                },
-                hideChooseItems: function() { //隐藏控件的列表元素
-                    $("#bgDiv").bind("click",
-                        function() {
-                            var selectItemBoxAll = $(".selectItemBox");
-                            selectItemBoxAll.slideUp(300);
-                        });
-                },
-                chooseItem: function() { //在控件中选择元素
-                    selectItemBox.find('.selectItem').off("mousedown").on("mousedown", function(e) {
-                        e.stopPropagation();
-                        e.preventDefault();
-                        var _this = $(this);
-                        var targetImage = _this.find('img');
-                        var targetLabel = _this.find('label');
-                        if (_this.attr('select') == 'select') {
-                            _this.removeAttr('select');
-                            targetImage.attr('src', 'images/unchecked_checkbox.png');
-                            for (var i = 0, len = selectOptionsIds.length; i < len; i++) {
-                                if (targetLabel.attr('displaymember') === selectOptionsIds[i]) {
-                                    selectOptionsIds.splice(i, 1);
-                                }
-                            }
-                        } else {
-                            _this.attr('select', 'select');
-                            targetImage.attr('src', 'images/checked_checkbox.png');
-                            selectOptionsIds.push(targetLabel.attr('displaymember'));
-                        }
-                        var value = selectOptionsIds.join(',');
-                        controlObj.attr({'selectOptionsIds': value});
-                        var variIdArr = controlObj.attr('variableid').split(',');
-                        if (variIdArr.sort().toString() == selectOptionsIds.sort().toString()) {
-                            $('.selectAll'+idd).attr('select', 'all');
-                            $('.selectAll'+idd).find('img').attr('src', 'images/checked_checkbox.png');
-                        } else {
-                            $('.selectAll'+idd).removeAttr('select');
-                            $('.selectAll'+idd).find('img').attr('src', 'images/unchecked_checkbox.png');
-                        }
-                    });
-                },
-                chooseAll: function() {
-                    selectItemBox.off("mousedown").on("mousedown", "div.selectAll", function(e) {
-                        e.stopPropagation();
-                        e.preventDefault();
-                        if ($(this).attr('select') == 'all') {
-                            $(this).removeAttr('select');
-                            $(this).find('img').attr('src', 'images/unchecked_checkbox.png');
-                            $(this).siblings('div.selectItem').removeAttr('select');
-                            $(this).siblings('div.selectItem').find('img').attr('src', 'images/unchecked_checkbox.png');
-                            controlObj.removeAttr('selectOptionsIds');
-                            selectOptionsIds = [];
-                        } else {
-                            $(this).attr('select', 'all');
-                            $(this).find('img').attr('src', 'images/checked_checkbox.png');
-                            $(this).siblings('div.selectItem').attr('select', 'select');
-                            $(this).siblings('div.selectItem').find('img').attr('src', 'images/checked_checkbox.png');
-                            controlObj.attr({'selectOptionsIds': controlObj.attr('variableid')});
-                            selectOptionsIds = controlObj.attr('variableid').split(',');
-                        }
-                    });
-                },
-                init: function() {
-                    this.comboBtn();
-                    this.hideChooseItems();
-                    this.chooseItem();
-                    this.chooseAll();
-                }
-            };
-            comboSelect.init();
-        });
-        $.each($("input[id^='infoInput']"), function() {
-            $(this).unbind('keyup').bind('keyup', function() {
-                var idd = $(this).attr('id').split('-')[1];
-                var controlObj = $('#'+idd);
-                //对输入进行校验
-                var variableType = controlObj.attr('variableType').split(',')[0];
-                var minValue = controlObj.attr('MinEuVal'); //允许输入的最小工程值
-                var maxValue = controlObj.attr('MixEuVal'); //允许输入的最大工程值
-                var reg;
-                if (variableType) {
-                    if (variableType === '开关量') { //配置的变量为‘开关量’
-                        reg = /^[0-1]$/;
-                        if (!reg.test($(this).val())) {
-                            $(this).val('');
-                        }
-                    } else if (variableType === '整型量') { //配置的变量为‘开关量’
-                        if (minValue && maxValue) {
-                            $(this).attr('minlength', minValue.length);
-                            $(this).attr('maxlength', maxValue.length);
-                        }
-                        reg = /^[0-9]*$/;
-                        if (reg.test($(this).val())) {
-                            if (! (parseInt($(this).val()) <= parseInt(maxValue) && parseInt($(this).val()) >= parseInt(minValue))) {
-                                alert('输入值不在范围内，请重新输入');
-                                $(this).val('');
-                            }
-                        } else {
-                            $(this).val('');
-                        }
-                    } else if (variableType === '浮点量') { //配置的变量为‘浮点量’
-                        reg = /^[0-9]+(.[0-9]*)?$/;
-                        if (minValue && maxValue) {
-                            if (reg.test($(this).val())) {
-                                if (! (parseFloat($(this).val()) <= parseFloat(maxValue) && parseFloat($(this).val()) >= parseFloat(minValue))) {
-                                    alert('输入值不在范围内，请重新输入');
-                                    $(this).val('');
-                                }
-                            } else {
-                                $(this).val('');
-                            }
-                        }
-                    } else if (variableType === '字符量') { //配置的变量为‘字符量’
-                        //输入没有限制
-                    }
-                } else {
-                    alert('请配置变量！');
-                    $(this).val('');
-                }
-            });
-        });
-        $.each($("img[id^='infoSend']"), function() {
-            $(this).unbind('mousedown').bind('mousedown', function() {
-                var idd = $(this).attr('id').split('-')[1];
-                var controlObj = $('#' + idd);
-                if (inItWebMode.editMode == false) {
-                    var selectOptionsIds = controlObj.attr('selectOptionsIds');
-                    if (selectOptionsIds) {
-                        var value = $('#infoInput-'+idd).val();
-                        if (controlObj.attr('sure') == 'yes') {
-                            inItSendModal.modelPage(idd);
-                            inItSendModal.modelFeature(value, idd);
-                        } else {
-                            inItSendModal.modelFeature1(value, idd);
-                        }
-                    } else {
-                        alert('请选择要下发命令的数据项！');
-                    }
-                }
-            });
-
-        });
-    },
         inIt:function(){
             this.minor();
             this.sliderBar();
@@ -3673,7 +3494,6 @@ $(function(){
             this.scene();
             this.communicate();
             this.video();
-            this.batch();
         }
     };
     action.inIt();

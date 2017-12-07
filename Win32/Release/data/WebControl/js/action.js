@@ -28,53 +28,48 @@ var setCameraData = function(URL,PathName,CameraName){ //请求摄像头数据�
      return JSON.stringify(sendDataList);
 }
 var sendPostData = function(val, obj) { //post方式 下发命令数据格式  val为值   obj为控件idd标识
-    writeControlshow(obj,val);//对写控件的下发数据的显示
-    var sendDataList = {
-        'RequestMethod': 'post',
-        'Session_value': window.localStorage.getItem("Session_value"),
-        'Command': 5,
-        'Tag': []
-    };
-    var controlObj = $("#" + obj);
-    var variableid = controlObj.attr("selectoptionsids") ? controlObj.attr("selectoptionsids") : controlObj.attr("variableid");
-    var variableIdArr = variableid.split(',');
-    var len = variableIdArr.length;
-    var variabletype = controlObj.attr("variabletype").split(',')[0];
-    var type;
-    switch (variabletype) {
-    case "开关量":
-        type = 0;
-        val = parseInt(val);
-        val = Boolean(val);
-        break;
-    case "整型量":
-        type = 1;
-        val = parseInt(val);
-        break;
-    case "浮点量":
-        type = 2;
-        val = parseFloat(val);
-        break;
-    case "字符量":
-        type = 3;
-        break;
-    default:
-        false;
-    }
-    for (var i = 0 ; i < len; i++) {
+        writeControlshow(obj,val);//对写控件的下发数据的显示
+        var sendDataList = {
+            'RequestMethod': 'post',
+            'Session_value': window.localStorage.getItem("Session_value"),
+            'Command': 5,
+            'Tag': []
+        };
+        var variableid = $("#" + obj).attr("variableid");
+        var variabletype = $("#" + obj).attr("variabletype");
+        var type;
+        switch (variabletype) {
+        case "开关量":
+            type = 0;
+            val = parseInt(val);
+            val = Boolean(val);
+            break;
+        case "整型量":
+            type = 1;
+            val = parseInt(val);
+            break;
+        case "浮点量":
+            type = 2;
+            val = parseFloat(val);
+            break;
+        case "字符量":
+            type = 3;
+            break;
+        default:
+            false;
+        }
         var arr = {
             "ID": {
-                "SubsystemID": parseInt(variableIdArr[i].substring(0, 2), 16),
-                "DeviceID": parseInt(variableIdArr[i].substring(2, 4), 16),
-                "TagID": parseInt(variableIdArr[i].substring(4, variableIdArr[i].length), 16)
+                "SubsystemID": parseInt(variableid.substring(0, 2), 16),
+                "DeviceID": parseInt(variableid.substring(2, 4), 16),
+                "TagID": parseInt(variableid.substring(4, variableid.length), 16)
             },
             "Type": type,
             "Value": val
         };
         sendDataList["Tag"].push(arr);
-    }
-    return JSON.stringify(sendDataList);
-};
+        return JSON.stringify(sendDataList);
+    };
 var getSendData = function(allElementObj) { //get请求数据发送数据
     var sendDataList = {
         'RequestMethod': 'get',
