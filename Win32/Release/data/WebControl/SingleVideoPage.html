@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--注释：这个页面用于处理海康视频控件（热点样式、无云台控制功能）点击新打开一个页面接入视频画面-->
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            padding:0;
+            margin:0;
+        }
+    </style>
+    <script type="text/javascript">
+        function unCompile(str) {
+            str = unescape(str);
+            var c = String.fromCharCode(str.charCodeAt(0) - str.length);
+            for(var i = 1; i < str.length; i++) {
+                c += String.fromCharCode(str.charCodeAt(i) - c.charCodeAt(i-1));
+            }
+            return c;
+        }
+        var url = location.search.substring(1);
+        var param = {};
+        if (url != '') {
+            var array = url.split('&');
+            param = {
+                szIP: decodeURIComponent(array[0].split('=')[1]),
+                szPort: decodeURIComponent(array[1].split('=')[1]),
+                szUsername: unCompile(decodeURIComponent(array[2].split('=')[1])),
+                szPassword: unCompile(decodeURIComponent(array[3].split('=')[1])),
+                cameraBrand: '海康威视',
+                cameraName: decodeURIComponent(array[4].split('=')[1])
+            };
+            document.title = param.cameraName;
+        }
+        var tWidth =  document.documentElement.clientWidth;//获取可见区域的宽度
+        var tHeight = document.documentElement.clientHeight;//获取可见区域的高度
+    </script>
+</head>
+<body>
+    <div id="divPlugin" class="plugin"></div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/webVideoCtrl.js"></script>
+<script src="js/singleVideo.js"></script>
+</html>

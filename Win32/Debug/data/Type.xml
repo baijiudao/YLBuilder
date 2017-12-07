@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Types>
+	<Type Type="folder" Icon="\data\images\Icon\folder.png"></Type>
+	<Type Type="unfolder" Icon="\data\images\Icon\unfolder.png"></Type>
+    <Type Type="bmp"  Icon="\data\images\Icon\image.png"></Type>
+    <Type Type="jpg"  Icon="\data\images\Icon\image.png"></Type>
+    <Type Type="gif"  Icon="\data\images\Icon\image.png"></Type>
+    <Type Type="png"  Icon="\data\images\Icon\image.png"></Type>
+    <Type Type="svg"  Icon="\data\images\Icon\image.png"></Type>
+    <Type Type="html" Icon="\data\images\Icon\html.png"></Type>
+    <Type Type="htm"  Icon="\data\images\Icon\html.png"></Type>
+     <Type Type="none"  Icon="\data\images\Icon\none.png"></Type>
+    <Type Type="default" Icon="\data\images\Icon\default.png"></Type>
+</Types>

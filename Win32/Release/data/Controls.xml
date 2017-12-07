@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Controls>
+    <Control Type="batch" Icon="\data\res\Controls\TableIcon\Pip.png" DragPic="data\res\Controls\DragPic\Pip.png">组控</Control>
+    <Control Type="pip" Icon="\data\res\Controls\TableIcon\Pip.png" DragPic="data\res\Controls\DragPic\Pip.png">管道控件</Control>
+    <Control Type="video" Icon="\data\res\Controls\TableIcon\Video.png" DragPic="data\res\Controls\DragPic\Video.png">通用视频控件</Control>
+    <Control Type="removalshit" Icon="\data\res\Controls\TableIcon\Removalshit.png" DragPic="data\res\Controls\DragPic\Removalshit.png">移动场景导航</Control>
+    <Control Type="scene" Icon="\data\res\Controls\TableIcon\Scene.png" DragPic="data\res\Controls\DragPic\Scene.png">场景导航</Control>
+    <Control Type="communicate" Icon="\data\res\Controls\TableIcon\Communicate.png" DragPic="data\res\Controls\DragPic\Communicate.png">通信测试控件</Control>
+    <Control Type="hkvideo" Icon="\data\res\Controls\TableIcon\Video.png" DragPic="data\res\Controls\DragPic\Video.png">海康视频控件</Control>
+    <Control Type="elevator" Icon="\data\res\Controls\TableIcon\Elevator.png" DragPic="data\res\Controls\DragPic\Elevator.png">电梯控件</Control>
+    <Control Type="chart" Icon="\data\res\Controls\TableIcon\Chart.png" DragPic="data\res\Controls\DragPic\Chart.png">图表控件</Control>
+    <Control Type="realTimeAlarm" Icon="\data\res\Controls\TableIcon\RealTimeAlarm.png" DragPic="data\res\Controls\DragPic\RealTimeAlarm.png">实时报警控件</Control>
+    <Control Type="alarm" Icon="\data\res\Controls\TableIcon\Alarm.png" DragPic="data\res\Controls\DragPic\Alarm.png">历史报警控件</Control>
+    <Control Type="history" Icon="\data\res\Controls\TableIcon\History.png" DragPic="data\res\Controls\DragPic\History.png">历史事件控件</Control>
+    <Control Type="dial" Icon="\data\res\Controls\TableIcon\Dial.png" DragPic="data\res\Controls\DragPic\Dial.png">表盘控件</Control>
+    <!--<Control Type="list" Icon="\data\res\Controls\TableIcon\List.png" DragPic="data\res\Controls\DragPic\List.png">列表框</Control>-->
+    <Control Type="slidebar" Icon="\data\res\Controls\TableIcon\Slidebar.png" DragPic="data\res\Controls\DragPic\Slidebar.png">滑杆</Control>
+    <Control Type="progress" Icon="\data\res\Controls\TableIcon\Progress.png" DragPic="data\res\Controls\DragPic\Progress.png">进度条</Control>
+    <Control Type="rotate" Icon="\data\res\Controls\TableIcon\Rotate.png" DragPic="data\res\Controls\DragPic\Rotate.png">旋转</Control>
+    <Control Type="fill" Icon="\data\res\Controls\TableIcon\Fill.png" DragPic="data\res\Controls\DragPic\Fill.png">填充</Control>
+    <Control Type="straight" Icon="\data\res\Controls\TableIcon\Straight.png" DragPic="data\res\Controls\DragPic\Straight.png">直线运动</Control>
+    <Control Type="status" Icon="\data\res\Controls\TableIcon\Status.png" DragPic="data\res\Controls\DragPic\Status.png">多状态</Control>
+    <Control Type="switch" Icon="\data\res\Controls\TableIcon\Switch.png" DragPic="data\res\Controls\DragPic\Switch.png">开关</Control>
+    <Control Type="checkbox" Icon="\data\res\Controls\TableIcon\Checkbox.png" DragPic="data\res\Controls\DragPic\Checkbox.png">复选框</Control>
+    <Control Type="radio" Icon="\data\res\Controls\TableIcon\Radio.png" DragPic="data\res\Controls\DragPic\Radio.png">单选框</Control>
+    <Control Type="edit" Icon="\data\res\Controls\TableIcon\Edit.png" DragPic="data\res\Controls\DragPic\Edit.png">编辑框</Control>
+    <Control Type="minor" Icon="\data\res\Controls\TableIcon\Minor.png" DragPic="data\res\Controls\DragPic\Minor.png">微调</Control>
+    <Control Type="combo" Icon="\data\res\Controls\TableIcon\Combo.png" DragPic="data\res\Controls\DragPic\Combo.png">组合框</Control>
+    <Control Type="button" Icon="\data\res\Controls\TableIcon\Button.png" DragPic="data\res\Controls\DragPic\Button.png">按钮</Control>
+    <Control Type="text" Icon="\data\res\Controls\TableIcon\Text.png" DragPic="data\res\Controls\DragPic\Text.png">文本显示</Control>
+</Controls>

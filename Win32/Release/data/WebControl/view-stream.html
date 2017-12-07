@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSMpeg Stream Client</title>
+    <style type="text/css">
+        html, body {
+            background-color: #111;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <canvas id="video-canvas"></canvas>
+    <script type="text/javascript" src="js/jsmpeg.min.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        var queryStr = location.search.substring(1);
+        var param = {};
+        if (queryStr != '') {
+            var array = queryStr.split('&');
+            param = {
+                szPort: array[0],
+                cameraName: decodeURIComponent(array[1]),
+                width: array[2],
+                height: array[3]
+            };
+            document.title = param.cameraName;
+        }
+        var canvas = document.getElementById('video-canvas');
+        $('body').css({
+            'width': param.width + 'px',
+            'height': param.height + 'px'
+        });
+        $('#video-canvas').css({
+            'width': '100%',
+            'height': 'calc(100% - 4px)'
+        });
+        var address = document.location.hostname;
+		var addressArr;
+		var host;
+		var reg = /^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/;//正则IP
+		if(address != ''){
+			if (address == "localhost" || address == '127.0.0.1'){
+				host = 'ws://127.0.0.1'+':'+param.szPort+'/';
+			}else{
+				if(reg.test(address)){
+					host = 'ws://'+address+':'+param.szPort+'/';
+				}else{
+					host = 'ws://'+address+':'+param.szPort+'/';
+				}
+			}
+		}/*else{
+			var newAddess = localStorage.getItem("newAddess");
+			if(newAddess != null){
+				host = 'ws://'+newAddess+':32767/';
+			}
+		}*/
+        var url = host;
+        var player = new JSMpeg.Player(url, {canvas: canvas});
+    </script>
+</body>
+</html>

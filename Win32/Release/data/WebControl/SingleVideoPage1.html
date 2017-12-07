@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<!--注释：这个页面用于处理海康视频控件（热点样式、有云台控制功能）点击新打开一个页面接入视频画面-->
+ <head lang="en">
+  <meta charset="UTF-8" />
+  <title></title>
+  <script src="js/jquery-1.12.4.js"></script>
+  <script src="js/action.js" async="async"></script>
+  <script src="js/external_fun.js" type="text/javascript" id="external_fun"></script>
+  <link href="css/style.css" rel="stylesheet" id="ylitech_css_jquery_ui" />
+  <script src="js/resize.js" type="text/javascript" id="ylitech_js_resize"></script>
+  <script src="js/md5.js" type="text/javascript" id="md5_js_action"></script>
+  <script src="js/webVideoCtrl.js" type="text/javascript" id="ylitech_js_webVideoCtrl"></script>
+
+ </head>
+ <body style="width: 620px; height: 330px; background-color: #000000; overflow: hidden">
+  <div id="content" style="-webkit-user-select: none;"></div>
+  <div id="bgDiv" class="bgdiv" style="-webkit-user-select: none; position: relative;"></div>
+ </body>
+
+ <script>
+     var url = location.search.substring(1);
+     var param = {};
+     if (url != '') {
+         var array = url.split('&');
+         param = {
+             szIP: decodeURIComponent(array[0].split('=')[1]),
+             szPort: decodeURIComponent(array[1].split('=')[1]),
+             szUsername: decodeURIComponent(array[2].split('=')[1]),
+             szPassword: decodeURIComponent(array[3].split('=')[1]),
+             cameraBrand: '海康威视',
+             cameraName: decodeURIComponent(array[4].split('=')[1]),
+             id: decodeURIComponent(array[5].split('=')[1]),
+             dirPath: decodeURIComponent(array[6].split('=')[1])
+         };
+         document.title = param['cameraName'];
+         var createVideoDom = function(idd) {
+             var oFrag = $(
+                     '<div id="'+idd+'" class="contrl" type="windowDisplay" directioncontrol="yes" imagetype="0" cameraname="摄像头名称/位置" style="position: absolute; height: 310px; width: 600px; border: 1px solid rgb(223, 223, 223); padding: 9px 0 9px 9px; z-index: 2; background-color: rgb(240, 240, 240);" dirpath="C:\Users\Liuying.YLITECH\Desktop\1111">' +
+                     '<div class="totalVideo totalVideo'+idd+'">' +
+                     '<div id="divPlugin'+idd+'" class="windowArea windowArea'+idd+'">视频窗口区</div>' +
+                     '<div class="settingArea settingArea'+idd+'">' +
+                     '<div class="videoTitle videoTitle'+idd+'">摄像头名称/位置</div>' +
+                     '<div class="cloudControl cloudControl'+idd+'">' +
+                     '<div class="enableControl'+idd+'">' +
+                     '<div class="circle_1 circle_1'+idd+'"></div>' +
+                     '<div class="circle_2 circle_2'+idd+'">' +
+                     '<div id="cloudUp-'+idd+'" class="cloudDirectionUp cloudDirectionUp'+idd+'">' +
+                     '<div class="triangleUp"></div>' +
+                     '</div>' +
+                     '<div class="cloudDirectionBoth cloudDirectionBoth'+idd+'">' +
+                     '<div id="cloudLeft-'+idd+'" class="cloudDirectionLeft cloudDirectionLeft'+idd+'">' +
+                     '<div class="triangleLeft"></div>' +
+                     '</div>' +
+                     '<div id="cloudRight-'+idd+'" class="cloudDirectionRight cloudDirectionRight'+idd+'" style="cursor: pointer; background-size: 100% 100%; background-repeat: no-repeat;">' +
+                     '<div class="triangleRight" style="display: block;"></div>' +
+                     '</div>' +
+                     '</div>' +
+                     '<div id="cloudDown-'+idd+'" class="cloudDirectionDown cloudDirectionDown'+idd+'">' +
+                     '<div class="triangleDown"></div>' +
+                     '</div>' +
+                     '</div>' +
+                     '</div>' +
+                     '</div>' +
+                     '<div class="picList picList'+idd+'">' +
+                     '<img id="capturePic-'+idd+'" src="images/capturePic.png" title="抓拍" />' +
+                     '</div>' +
+                     '</div>' +
+                     '</div>' +
+                     '</div>'
+             );
+             $('#content').append(oFrag);
+             $('#'+idd).attr({
+                'ip': param['szIP'],
+                 'port': param['szPort'],
+                 'username': param['szUsername'],
+                 'password': param['szPassword'],
+                 'cameraBrand': param['cameraBrand'],
+                 'cameraName': param['cameraName'],
+                 'dirPath': param['dirPath'],
+                 'imageType': '0'
+             });
+         };
+         createVideoDom(param['id']);
+     }
+ </script>
+
+</html>

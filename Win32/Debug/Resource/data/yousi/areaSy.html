@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>left_top</title>
+    <link rel="stylesheet" href="css/reset.css" />
+	<script src="js/jquery-1.11.3.js"></script>
+</head>
+	<style>
+		#content{
+			width:820px;
+			background:#1ea6a4;
+		}
+		#title{
+			width:805px;
+			margin:0 15px 0 0px;
+			height:180px;
+			line-height:120px;
+			font-size:18px;
+			color:#e0dcd9;
+			text-align:center;
+			background:#126665;
+			font-weight:bold;
+		}
+		.buttom{
+			width:820px;
+			height:18px;
+			background:#1ea6a4;
+		}
+	</style>
+<body>
+	<div id="content">
+		<div id="title">正在审阅<span id="param">等待中...</span>视频</div>
+		<div class="buttom"></div>
+	</div>
+<script>
+;$(function(){
+	var ss = window.location.search.substring(1);
+	if (ss.length>0){
+		var ay = Array();
+		ay = ss.split("&");
+		//console.log(ay[1]);
+		var txt = $("#param").text(ay[0]);
+		var videoname = "../hkvideo/cn/hkeasy.html?"+ay[1];
+		window.open(videoname,"video",true);
+	}
+
+	
+})
+</script>
+</body>
+</html>
