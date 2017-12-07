@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{3145a709-d704-434c-b2dc-f751a9416e09}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{8594dc67-b9da-422f-93a8-a512b9be6186}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{4c175667-0998-49cd-bec0-cab4b60bd1d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Header Files">
+      <UniqueIdentifier>{50fc5555-f070-4c5f-b641-f8438e424542}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files">
+      <UniqueIdentifier>{ecd69924-402b-4a8b-9ac9-34a437f35240}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\WebEditFrame">
+      <UniqueIdentifier>{d55da771-e6e7-4859-9e16-168d040ab62c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\WebEditFrame">
+      <UniqueIdentifier>{3bf6ccd3-343a-44b2-9fd5-4aaf58138210}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PicEditFrame">
+      <UniqueIdentifier>{61bcab09-1377-4ac3-b9e6-c4a0401ba0c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PicEditFrame">
+      <UniqueIdentifier>{84c7c378-d588-418f-bb9a-11a272059de3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="webconfigurationtool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_webconfigurationtool.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_webconfigurationtool.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\src\Markup.cpp">
+      <Filter>Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Ellipse_GraphicsItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Ellipse_GraphicsItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Line_GraphicsItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Line_GraphicsItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Polygon_GraphicsItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Polygon_GraphicsItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Rectangle_GraphicsItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Rectangle_GraphicsItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_RouRectangle_GraphicsItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_RouRectangle_GraphicsItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Text_GraphicsItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Text_GraphicsItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\DrawItemFrame.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\Ellipse_GraphicsItem.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\Line_GraphicsItem.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\Polygon_GraphicsItem.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\Rectangle_GraphicsItem.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\RouRectangle_GraphicsItem.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\Text_GraphicsItem.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_WebConfigurationTool.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QControlTableWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QControlTableWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QSrcEditWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QSrcEditWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QWebEngineEditView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QWebEngineEditView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QWebViewWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QWebViewWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_WebEditFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_WebEditFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\QControlTableWidget.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\QSrcEditWidget.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\QWebEngineEditView.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\QWebViewWidget.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\WebEditFrame.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Group_GraphicsItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Group_GraphicsItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Group_GraphicsItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Group_GraphicsItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\Group_GraphicsItem.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_DataStorager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_DataStorager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainGraphicsScene.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainGraphicsScene.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\DataStorager.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\MainGraphicsScene.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QWebChannelApi.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QWebChannelApi.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\QWebChannelApi.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MainGraphicsView.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MainGraphicsView.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PicEditFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PicEditFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\MainGraphicsView.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\PicEditFrame.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Picture_GraphicsItem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Picture_GraphicsItem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\Picture_GraphicsItem.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\CreateProjectDialog.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CreateProjectDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CreateProjectDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\FileManager.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_FileManager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_FileManager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\ProjectManagerWidget.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ProjectManagerWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ProjectManagerWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PicStorEditFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PicStorEditFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\PicStorEditFrame.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_WebFileEditFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_WebFileEditFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\WebFileEditFrame.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\WebEditToolBarWidget.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_WebEditToolBarWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_WebEditToolBarWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\BaseItem.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_BaseTabWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_BaseTabWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\BaseTabWidget.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QWebEditWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QWebEditWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\QWebEditWidget.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QSetCanvasSizeDlg.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QSetCanvasSizeDlg.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QSetWebTitleDlg.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QSetWebTitleDlg.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\QSetCanvasSizeDlg.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\QSetWebTitleDlg.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_BaseFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_BaseFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\BaseFrame.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_TreeViewDelegate.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_TreeViewDelegate.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\TreeViewDelegate.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_IcgManagerWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_IcgManagerWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PicBaseFrame.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PicBaseFrame.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PicBaseTabWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PicBaseTabWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PicEditToolBarWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PicEditToolBarWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\PicBaseFrame.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\PicBaseTabWidget.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\PicEditToolBarWidget.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseDockWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_BaseDockWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_BaseDockWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_PictureStorageWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_PictureStorageWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_IcgModel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_IcgModel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\IcgModel.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\IcgManagerWidget.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\PictureStorageWidget.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_IcgOperator.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_IcgOperator.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="PicEditRes\IcgOperator.cpp">
+      <Filter>Source Files\PicEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CameraConfigDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CameraConfigDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_CameraConfigModel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_CameraConfigModel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_Json.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_Json.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_IcgPreviewDialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_IcgPreviewDialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\IcgPreviewDialog.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\Json.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\CameraConfigDialog.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="WebEditFrame\CameraConfigModel.cpp">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="webconfigurationtool_global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\include\Markup.h">
+      <Filter>Common\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PicEditRes\DrawItemFrame.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\include\Include.h">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="webconfigurationtool.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\Ellipse_GraphicsItem.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\Line_GraphicsItem.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\Polygon_GraphicsItem.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\Rectangle_GraphicsItem.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\RouRectangle_GraphicsItem.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\Text_GraphicsItem.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebConfigurationTool.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\QControlTableWidget.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\QSrcEditWidget.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\QWebEngineEditView.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\QWebViewWidget.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\WebEditFrame.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\Group_GraphicsItem.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\DataStorager.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\MainGraphicsScene.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\QWebChannelApi.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\MainGraphicsView.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\PicEditFrame.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\Picture_GraphicsItem.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\ProjectManagerWidget.h">
+      <Filter>Source Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\PicStorEditFrame.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\WebFileEditFrame.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\WebEditToolBarWidget.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\BaseTabWidget.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\QWebEditWidget.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\QSetCanvasSizeDlg.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\QSetWebTitleDlg.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\CreateProjectDialog.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\BaseFrame.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\FileManager.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\TreeViewDelegate.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\BaseItem.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\PicBaseFrame.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\PicBaseTabWidget.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\PicEditToolBarWidget.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="BaseDockWidget.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\PictureStorageWidget.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\IcgModel.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\IcgManagerWidget.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="PicEditRes\IcgOperator.h">
+      <Filter>Header Files\PicEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\IcgPreviewDialog.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\CameraConfigDialog.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\CameraConfigModel.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+    <CustomBuild Include="WebEditFrame\Json.h">
+      <Filter>Header Files\WebEditFrame</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="webconfigurationtool_zh.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="webconfigurationtool_en.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

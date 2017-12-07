@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- QtnRibbonGroup.qdoc -->
+  <title>RibbonGroup Class | QtitanRibbon 3.3</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+    <div class="nav" id="qt13a-header">
+        <div class="qt13a-gradient">
+        <div class="qt13a-container qt13a-dynamicREMOVE" >
+                <div id="qt13a-register">
+                    <a href="http://www.devmachines.com">Home</a>
+                    <a href="http://www.devmachines.com/tech-support.html">Tech Support</a>
+                </div>
+                <div class="qt13a-sixCol">
+                    <div id="qt13a-logo">
+                        <a href="http://www.devmachines.com" class="qt13a-site-logo">
+                            <img src="images/dm_logo64x64.png" alt="Developer Machines"></img>
+                        </a>
+                    </div>
+                    <div id="qt13a-title_nav">
+                        <div id="qt13a-title">
+                                <p class="qt13a-title">QtitanChart Documentation</p>
+                        </div>
+                            <div class="qt13a-nav">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Index</a>
+                                    </li>
+                                    <li>
+                                        <a href="classes.html">All Classes</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:alert('Not implemented')">Examples</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+            <ul>
+<li>RibbonGroup</li>
+<li id="buildversion">
+</li>
+            </ul>
+        </div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">RibbonGroup Class</h1>
+<!-- $$$RibbonGroup-brief -->
+<p>RibbonGroup class implements a group of items that is hosted within <a href="ribbonpage.html">RibbonPage</a>. <a href="#details">More...</a></p>
+<!-- @@@RibbonGroup -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> </b><tt><span class="preprocessor">#include &lt;RibbonGroup&gt;</span>
+</tt></td></tr></table><ul>
+<li><a href="ribbongroup-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="ribbongroup.html#icon-prop">icon</a></b> : QIcon</li>
+<li class="fn"><b><a href="ribbongroup.html#isControlsCentering-prop">isControlsCentering</a></b> : bool</li>
+<li class="fn"><b><a href="ribbongroup.html#isControlsGrouping-prop">isControlsGrouping</a></b> : bool</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="ribbongroup.html#isOptionButtonVisible-prop">isOptionButtonVisible</a></b> : bool</li>
+<li class="fn"><b><a href="ribbongroup.html#reduced-prop">reduced</a></b> : const bool</li>
+<li class="fn"><b><a href="ribbongroup.html#title-prop">title</a></b> : const QString &amp;</li>
+</ul>
+</td></tr>
+</table>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#RibbonGroup">RibbonGroup</a></b>(QWidget *<i> parent</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#RibbonGroup-2">RibbonGroup</a></b>(QWidget *<i> parent</i>, const QString &amp;<i> groupName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#dtor.RibbonGroup">~RibbonGroup</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#addAction">addAction</a></b>(const QIcon &amp;<i> icon</i>, const QString &amp;<i> text</i>, Qt::ToolButtonStyle<i> style</i>, QMenu *<i> menu</i> = Q_NULL, QToolButton::ToolButtonPopupMode<i> mode</i> = QToolButton::MenuButtonPopup)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#addAction-2">addAction</a></b>(QAction *<i> action</i>, Qt::ToolButtonStyle<i> style</i>, QMenu *<i> menu</i> = Q_NULL, QToolButton::ToolButtonPopupMode<i> mode</i> = QToolButton::MenuButtonPopup)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QMenu * </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#addMenu">addMenu</a></b>(const QIcon &amp;<i> icon</i>, const QString &amp;<i> text</i>, Qt::ToolButtonStyle<i> style</i> = Qt::ToolButtonFollowStyle)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#addSeparator">addSeparator</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#addWidget">addWidget</a></b>(QWidget *<i> widget</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#addWidget-2">addWidget</a></b>(const QIcon &amp;<i> icon</i>, const QString &amp;<i> text</i>, QWidget *<i> widget</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#addWidget-3">addWidget</a></b>(const QIcon &amp;<i> icon</i>, const QString &amp;<i> text</i>, bool<i> align</i>, QWidget *<i> widget</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#clear">clear</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QIcon &amp; </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#icon-prop">icon</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#insertAction">insertAction</a></b>(QAction *<i> before</i>, QAction *<i> action</i>, Qt::ToolButtonStyle<i> style</i>, QMenu *<i> menu</i> = Q_NULL, QToolButton::ToolButtonPopupMode<i> mode</i> = QToolButton::MenuButtonPopup)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#isControlsCentering-prop">isControlsCentering</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#isControlsGrouping-prop">isControlsGrouping</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#isOptionButtonVisible-prop">isOptionButtonVisible</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#reduced-prop">isReduced</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#isVisible">isVisible</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#optionButtonAction">optionButtonAction</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#remove">remove</a></b>(QWidget *<i> widget</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#isControlsCentering-prop">setControlsCentering</a></b>(bool<i> controlsCentering</i> = true)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#isControlsGrouping-prop">setControlsGrouping</a></b>(bool<i> controlsGrouping</i> = true)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#icon-prop">setIcon</a></b>(const QIcon &amp;<i> icon</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#setOptionButtonAction">setOptionButtonAction</a></b>(QAction *<i> action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#isOptionButtonVisible-prop">setOptionButtonVisible</a></b>(bool<i> visible</i> = true)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#title-prop">setTitle</a></b>(const QString &amp;<i> title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#setVisible">setVisible</a></b>(bool<i> visible</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QSize </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#sizeHint">sizeHint</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QString &amp; </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#title-prop">title</a></b>() const</td></tr>
+</table>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#titleChanged">titleChanged</a></b>(const QString &amp;<i> title</i>)</td></tr>
+</table>
+<a name="protected-functions"></a>
+<h2>Protected Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#actionEvent">actionEvent</a></b>(QActionEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#enterEvent">enterEvent</a></b>(QEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#event">event</a></b>(QEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#leaveEvent">leaveEvent</a></b>(QEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#mousePressEvent">mousePressEvent</a></b>(QMouseEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#mouseReleaseEvent">mouseReleaseEvent</a></b>(QMouseEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#paintEvent">paintEvent</a></b>(QPaintEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbongroup.html#resizeEvent">resizeEvent</a></b>(QResizeEvent *<i> event</i>)</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$RibbonGroup-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>RibbonGroup class implements a group of items that is hosted within <a href="ribbonpage.html">RibbonPage</a>.</p>
+</div>
+<!-- @@@RibbonGroup -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$icon-prop$$$icon$$$setIconconstQIcon& -->
+<h3 class="fn"><a name="icon-prop"></a><span class="name">icon</span> : <span class="type">QIcon</span></h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> const QIcon &amp; </td><td class="memItemRight bottomAlign"><span class="name"><b>icon</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setIcon</b></span>(const QIcon &amp;<i> icon</i>)</td></tr>
+</table>
+<!-- @@@icon -->
+<!-- $$$isControlsCentering-prop$$$isControlsCentering$$$setControlsCenteringbool -->
+<h3 class="fn"><a name="isControlsCentering-prop"></a><span class="name">isControlsCentering</span> : <span class="type">bool</span></h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isControlsCentering</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setControlsCentering</b></span>(bool<i> controlsCentering</i> = true)</td></tr>
+</table>
+<!-- @@@isControlsCentering -->
+<!-- $$$isControlsGrouping-prop$$$isControlsGrouping$$$setControlsGroupingbool -->
+<h3 class="fn"><a name="isControlsGrouping-prop"></a><span class="name">isControlsGrouping</span> : <span class="type">bool</span></h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isControlsGrouping</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setControlsGrouping</b></span>(bool<i> controlsGrouping</i> = true)</td></tr>
+</table>
+<!-- @@@isControlsGrouping -->
+<!-- $$$isOptionButtonVisible-prop$$$isOptionButtonVisible$$$setOptionButtonVisiblebool -->
+<h3 class="fn"><a name="isOptionButtonVisible-prop"></a><span class="name">isOptionButtonVisible</span> : <span class="type">bool</span></h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isOptionButtonVisible</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setOptionButtonVisible</b></span>(bool<i> visible</i> = true)</td></tr>
+</table>
+<!-- @@@isOptionButtonVisible -->
+<!-- $$$reduced-prop$$$isReduced -->
+<h3 class="fn"><a name="reduced-prop"></a><span class="name">reduced</span> : const <span class="type">bool</span></h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isReduced</b></span>() const</td></tr>
+</table>
+<!-- @@@reduced -->
+<!-- $$$title-prop$$$title$$$setTitleconstQString& -->
+<h3 class="fn"><a name="title-prop"></a><span class="name">title</span> : const <span class="type">QString</span> &amp;</h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> const QString &amp; </td><td class="memItemRight bottomAlign"><span class="name"><b>title</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setTitle</b></span>(const QString &amp;<i> title</i>)</td></tr>
+</table>
+<!-- @@@title -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$RibbonGroup[overload1]$$$RibbonGroupQWidget* -->
+<h3 class="fn"><a name="RibbonGroup"></a>RibbonGroup::<span class="name">RibbonGroup</span>(<span class="type">QWidget</span> *<i> parent</i>)</h3>
+<!-- @@@RibbonGroup -->
+<!-- $$$RibbonGroup$$$RibbonGroupQWidget*constQString& -->
+<h3 class="fn"><a name="RibbonGroup-2"></a>RibbonGroup::<span class="name">RibbonGroup</span>(<span class="type">QWidget</span> *<i> parent</i>, const <span class="type">QString</span> &amp;<i> groupName</i>)</h3>
+<p>Constructs <a href="ribbongroup.html">RibbonGroup</a> object with the given parent and group name.</p>
+<!-- @@@RibbonGroup -->
+<!-- $$$~RibbonGroup[overload1]$$$~RibbonGroup -->
+<h3 class="fn"><a name="dtor.RibbonGroup"></a>RibbonGroup::<span class="name">~RibbonGroup</span>()<tt> [virtual]</tt></h3>
+<p>Destructor of the <a href="ribbongroup.html">RibbonGroup</a> object.</p>
+<!-- @@@~RibbonGroup -->
+<!-- $$$actionEvent[overload1]$$$actionEventQActionEvent* -->
+<h3 class="fn"><a name="actionEvent"></a><span class="type">void</span> RibbonGroup::<span class="name">actionEvent</span>(<span class="type">QActionEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@actionEvent -->
+<!-- $$$addAction[overload1]$$$addActionconstQIcon&constQString&Qt::ToolButtonStyleQMenu*QToolButton::ToolButtonPopupMode -->
+<h3 class="fn"><a name="addAction"></a><span class="type">QAction</span> * RibbonGroup::<span class="name">addAction</span>(const <span class="type">QIcon</span> &amp;<i> icon</i>, const <span class="type">QString</span> &amp;<i> text</i>, <span class="type">Qt::ToolButtonStyle</span><i> style</i>, <span class="type">QMenu</span> *<i> menu</i> = Q_NULL, <span class="type">QToolButton::ToolButtonPopupMode</span><i> mode</i> = QToolButton::MenuButtonPopup)</h3>
+<p>Creates and adds the action to the group with the given <i>icon</i>, <i>text</i> and <i>style</i>. If you specify the parameter <i>menu</i>, then will be constructed a special split button which will allow to cause this menu. Parameter <i>mode</i> defines the mode of the popup emerging.</p>
+<!-- @@@addAction -->
+<!-- $$$addAction$$$addActionQAction*Qt::ToolButtonStyleQMenu*QToolButton::ToolButtonPopupMode -->
+<h3 class="fn"><a name="addAction-2"></a><span class="type">QAction</span> * RibbonGroup::<span class="name">addAction</span>(<span class="type">QAction</span> *<i> action</i>, <span class="type">Qt::ToolButtonStyle</span><i> style</i>, <span class="type">QMenu</span> *<i> menu</i> = Q_NULL, <span class="type">QToolButton::ToolButtonPopupMode</span><i> mode</i> = QToolButton::MenuButtonPopup)</h3>
+<p>Adds the <i>action</i> to the group with the given parameters <i>style</i>, <i>menu</i> and <i>mode</i>.</p>
+<!-- @@@addAction -->
+<!-- $$$addMenu[overload1]$$$addMenuconstQIcon&constQString&Qt::ToolButtonStyle -->
+<h3 class="fn"><a name="addMenu"></a><span class="type">QMenu</span> * RibbonGroup::<span class="name">addMenu</span>(const <span class="type">QIcon</span> &amp;<i> icon</i>, const <span class="type">QString</span> &amp;<i> text</i>, <span class="type">Qt::ToolButtonStyle</span><i> style</i> = Qt::ToolButtonFollowStyle)</h3>
+<p>Adds the menu to the group with the given <i>icon</i>, <i>text</i> and <i>style</i>.</p>
+<!-- @@@addMenu -->
+<!-- $$$addSeparator[overload1]$$$addSeparator -->
+<h3 class="fn"><a name="addSeparator"></a><span class="type">QAction</span> * RibbonGroup::<span class="name">addSeparator</span>()</h3>
+<p>Creates separator action and adds it the group.</p>
+<!-- @@@addSeparator -->
+<!-- $$$addWidget[overload1]$$$addWidgetQWidget* -->
+<h3 class="fn"><a name="addWidget"></a><span class="type">QAction</span> * RibbonGroup::<span class="name">addWidget</span>(<span class="type">QWidget</span> *<i> widget</i>)</h3>
+<p>Adds the <i>widget</i> to the group.</p>
+<!-- @@@addWidget -->
+<!-- $$$addWidget$$$addWidgetconstQIcon&constQString&QWidget* -->
+<h3 class="fn"><a name="addWidget-2"></a><span class="type">QAction</span> * RibbonGroup::<span class="name">addWidget</span>(const <span class="type">QIcon</span> &amp;<i> icon</i>, const <span class="type">QString</span> &amp;<i> text</i>, <span class="type">QWidget</span> *<i> widget</i>)</h3>
+<p>Adds the <i>widget</i> to the group with the given parameters <i>icon</i> and <i>text</i>.</p>
+<!-- @@@addWidget -->
+<!-- $$$addWidget$$$addWidgetconstQIcon&constQString&boolQWidget* -->
+<h3 class="fn"><a name="addWidget-3"></a><span class="type">QAction</span> * RibbonGroup::<span class="name">addWidget</span>(const <span class="type">QIcon</span> &amp;<i> icon</i>, const <span class="type">QString</span> &amp;<i> text</i>, <span class="type">bool</span><i> align</i>, <span class="type">QWidget</span> *<i> widget</i>)</h3>
+<p>Adds the <i>widget</i> to the group with the given <i>icon</i> and <i>text</i> with ability to set alignment. Parameter <i>align</i> contains criterion for the widget alignment to the left side of the group.</p>
+<!-- @@@addWidget -->
+<!-- $$$clear[overload1]$$$clear -->
+<h3 class="fn"><a name="clear"></a><span class="type">void</span> RibbonGroup::<span class="name">clear</span>()</h3>
+<p>Removes all items from the group.</p>
+<!-- @@@clear -->
+<!-- $$$enterEvent[overload1]$$$enterEventQEvent* -->
+<h3 class="fn"><a name="enterEvent"></a><span class="type">void</span> RibbonGroup::<span class="name">enterEvent</span>(<span class="type">QEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@enterEvent -->
+<!-- $$$event[overload1]$$$eventQEvent* -->
+<h3 class="fn"><a name="event"></a><span class="type">bool</span> RibbonGroup::<span class="name">event</span>(<span class="type">QEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@event -->
+<!-- $$$insertAction[overload1]$$$insertActionQAction*QAction*Qt::ToolButtonStyleQMenu*QToolButton::ToolButtonPopupMode -->
+<h3 class="fn"><a name="insertAction"></a><span class="type">QAction</span> * RibbonGroup::<span class="name">insertAction</span>(<span class="type">QAction</span> *<i> before</i>, <span class="type">QAction</span> *<i> action</i>, <span class="type">Qt::ToolButtonStyle</span><i> style</i>, <span class="type">QMenu</span> *<i> menu</i> = Q_NULL, <span class="type">QToolButton::ToolButtonPopupMode</span><i> mode</i> = QToolButton::MenuButtonPopup)</h3>
+<p>Adds <i>action</i> before other action that specified in <i>before</i> argument. In result action's widget will be placed before widget that is associated with action <i>before</i>.</p>
+<!-- @@@insertAction -->
+<!-- $$$isVisible[overload1]$$$isVisible -->
+<h3 class="fn"><a name="isVisible"></a><span class="type">bool</span> RibbonGroup::<span class="name">isVisible</span>() const</h3>
+<!-- @@@isVisible -->
+<!-- $$$leaveEvent[overload1]$$$leaveEventQEvent* -->
+<h3 class="fn"><a name="leaveEvent"></a><span class="type">void</span> RibbonGroup::<span class="name">leaveEvent</span>(<span class="type">QEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@leaveEvent -->
+<!-- $$$mousePressEvent[overload1]$$$mousePressEventQMouseEvent* -->
+<h3 class="fn"><a name="mousePressEvent"></a><span class="type">void</span> RibbonGroup::<span class="name">mousePressEvent</span>(<span class="type">QMouseEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@mousePressEvent -->
+<!-- $$$mouseReleaseEvent[overload1]$$$mouseReleaseEventQMouseEvent* -->
+<h3 class="fn"><a name="mouseReleaseEvent"></a><span class="type">void</span> RibbonGroup::<span class="name">mouseReleaseEvent</span>(<span class="type">QMouseEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@mouseReleaseEvent -->
+<!-- $$$optionButtonAction[overload1]$$$optionButtonAction -->
+<h3 class="fn"><a name="optionButtonAction"></a><span class="type">QAction</span> * RibbonGroup::<span class="name">optionButtonAction</span>() const</h3>
+<p>Returns the pointer to action associated with the option button. Notes: Use this action if you want to initialize tooltips, the text in the status bar (StatusTip), icons or for to define custom events.</p>
+<p><b>See also </b><a href="ribbongroup.html#setOptionButtonAction">setOptionButtonAction</a>().</p>
+<!-- @@@optionButtonAction -->
+<!-- $$$paintEvent[overload1]$$$paintEventQPaintEvent* -->
+<h3 class="fn"><a name="paintEvent"></a><span class="type">void</span> RibbonGroup::<span class="name">paintEvent</span>(<span class="type">QPaintEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@paintEvent -->
+<!-- $$$remove[overload1]$$$removeQWidget* -->
+<h3 class="fn"><a name="remove"></a><span class="type">void</span> RibbonGroup::<span class="name">remove</span>(<span class="type">QWidget</span> *<i> widget</i>)</h3>
+<p>Removes the <i>widget</i> from the group and all actions linked to this widget.</p>
+<!-- @@@remove -->
+<!-- $$$resizeEvent[overload1]$$$resizeEventQResizeEvent* -->
+<h3 class="fn"><a name="resizeEvent"></a><span class="type">void</span> RibbonGroup::<span class="name">resizeEvent</span>(<span class="type">QResizeEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@resizeEvent -->
+<!-- $$$setOptionButtonAction[overload1]$$$setOptionButtonActionQAction* -->
+<h3 class="fn"><a name="setOptionButtonAction"></a><span class="type">void</span> RibbonGroup::<span class="name">setOptionButtonAction</span>(<span class="type">QAction</span> *<i> action</i>)</h3>
+<p>Sets the given <i>action</i> for the option button of the group. Option button is a small button on the bottom of the group. If action is not set then the option button is not visible.</p>
+<p><b>See also </b><a href="ribbongroup.html#optionButtonAction">optionButtonAction</a>().</p>
+<!-- @@@setOptionButtonAction -->
+<!-- $$$setVisible[overload1]$$$setVisiblebool -->
+<h3 class="fn"><a name="setVisible"></a><span class="type">void</span> RibbonGroup::<span class="name">setVisible</span>(<span class="type">bool</span><i> visible</i>)<tt> [virtual]</tt></h3>
+<p><b>See also </b><a href="ribbongroup.html#isVisible">isVisible</a>().</p>
+<!-- @@@setVisible -->
+<!-- $$$sizeHint[overload1]$$$sizeHint -->
+<h3 class="fn"><a name="sizeHint"></a><span class="type">QSize</span> RibbonGroup::<span class="name">sizeHint</span>() const<tt> [virtual]</tt></h3>
+<p>Returns the recommended size for <a href="ribbongroup.html">RibbonGroup</a>.</p>
+<!-- @@@sizeHint -->
+<!-- $$$titleChanged[overload1]$$$titleChangedconstQString& -->
+<h3 class="fn"><a name="titleChanged"></a><span class="type">void</span> RibbonGroup::<span class="name">titleChanged</span>(const <span class="type">QString</span> &amp;<i> title</i>)<tt> [signal]</tt></h3>
+<!-- @@@titleChanged -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2009-2015 Developer Machines<br><br>       Qt and their respective logos are trademarks of Digia Corporation 
+      in Finland and/or other countries worldwide.</p>
+    <p>
+      All other trademarks are property of their respective owners. <a title="Privacy Policy"
+        href="http://www.devmachines.com/company/privacy-policy.html">Privacy Policy</a></p>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17002018-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

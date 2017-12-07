@@ -1,0 +1,4 @@
+用户Web文件地址:		data\WebControl
+桌面软件编辑需要的js文件路径：	data\res\data
+控件列表：			data\Controls.xml
+控件图标以及拖拽时所显示图标：	data\res\Controls

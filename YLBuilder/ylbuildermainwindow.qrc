@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/YLBuilderMainWindow">
+        <file>YLBuilder.ico</file>
+        <file>res/PicEdit.png</file>
+        <file>res/WebEdit.png</file>
+        <file>res/about.png</file>
+        <file>res/ribbonMaximize.png</file>
+        <file>res/ribbonMinimize.png</file>
+        <file>res/smallUndo.png</file>
+        <file>res/smallRedo.png</file>
+        <file>res/help.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- QtnRibbonPage.qdoc -->
+  <title>RibbonPage Class | QtitanRibbon 3.3</title>
+  <link rel="stylesheet" type="text/css" href="style/online.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+    <div class="nav" id="qt13a-header">
+        <div class="qt13a-gradient">
+        <div class="qt13a-container qt13a-dynamicREMOVE" >
+                <div id="qt13a-register">
+                    <a href="http://www.devmachines.com">Home</a>
+                    <a href="http://www.devmachines.com/tech-support.html">Tech Support</a>
+                </div>
+                <div class="qt13a-sixCol">
+                    <div id="qt13a-logo">
+                        <a href="http://www.devmachines.com" class="qt13a-site-logo">
+                            <img src="images/dm_logo64x64.png" alt="Developer Machines"></img>
+                        </a>
+                    </div>
+                    <div id="qt13a-title_nav">
+                        <div id="qt13a-title">
+                                <p class="qt13a-title">QtitanChart Documentation</p>
+                        </div>
+                            <div class="qt13a-nav">
+                                <ul>
+                                    <li>
+                                        <a href="index.html">Index</a>
+                                    </li>
+                                    <li>
+                                        <a href="classes.html">All Classes</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:alert('Not implemented')">Examples</a>
+                                    </li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+    </div>
+    <div class="main">
+    <div class="main-rounded">
+        <div class="navigationbar">
+            <ul>
+<li>RibbonPage</li>
+<li id="buildversion">
+</li>
+            </ul>
+        </div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#protected-slots">Protected Slots</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">RibbonPage Class</h1>
+<!-- $$$RibbonPage-brief -->
+<p>RibbonPage class implements the Ribbon UI Page. Used to place objects of type - <a href="ribbongroup.html">RibbonGroup</a>. <a href="#details">More...</a></p>
+<!-- @@@RibbonPage -->
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> Header:</td><td class="memItemRight bottomAlign"> </b><tt><span class="preprocessor">#include &lt;RibbonPage&gt;</span>
+</tt></td></tr></table><ul>
+<li><a href="ribbonpage-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#ContextColor-enum">ContextColor</a></b> { ContextColorNone, ContextColorGreen, ContextColorBlue, ContextColorRed, ..., ContextColorOrange }</td></tr>
+</table>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><a href="ribbonpage.html#contextColor-prop">contextColor</a></b> : ContextColor</li>
+<li class="fn"><b><a href="ribbonpage.html#contextTitle-prop">contextTitle</a></b> : const QString &amp;</li>
+<li class="fn"><b><a href="ribbonpage.html#groupCount-prop">groupCount</a></b> : const int</li>
+<li class="fn"><b><a href="ribbonpage.html#title-prop">title</a></b> : const QString &amp;</li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#RibbonPage">RibbonPage</a></b>(QWidget *<i> parent</i> = Q_NULL)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#RibbonPage-2">RibbonPage</a></b>(QWidget *<i> parent</i>, const QString &amp;<i> title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#dtor.RibbonPage">~RibbonPage</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#addGroup">addGroup</a></b>(RibbonGroup *<i> group</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RibbonGroup * </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#addGroup-2">addGroup</a></b>(const QString &amp;<i> title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RibbonGroup * </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#addGroup-3">addGroup</a></b>(const QIcon &amp;<i> icon</i>, const QString &amp;<i> title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#clearGroups">clearGroups</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ContextColor </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#contextColor-prop">contextColor</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QString &amp; </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#contextTitle-prop">contextTitle</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QAction * </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#defaultAction">defaultAction</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RibbonGroup * </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#getGroup">getGroup</a></b>(int<i> index</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#groupCount-prop">groupCount</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QList&lt;RibbonGroup *&gt; </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#groups">groups</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#insertGroup">insertGroup</a></b>(int<i> index</i>, RibbonGroup *<i> group</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RibbonGroup * </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#insertGroup-2">insertGroup</a></b>(int<i> index</i>, const QString &amp;<i> title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RibbonGroup * </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#insertGroup-3">insertGroup</a></b>(int<i> index</i>, const QIcon &amp;<i> icon</i>, const QString &amp;<i> title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#isVisible">isVisible</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#removeGroup">removeGroup</a></b>(RibbonGroup *<i> group</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#removeGroup-2">removeGroup</a></b>(int<i> index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#contextColor-prop">setContextColor</a></b>(ContextColor<i> color</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QSize </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#sizeHint">sizeHint</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QString &amp; </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#title-prop">title</a></b>() const</td></tr>
+</table>
+<a name="public-slots"></a>
+<h2>Public Slots</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#contextTitle-prop">setContextTitle</a></b>(const QString &amp;<i> title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#title-prop">setTitle</a></b>(const QString &amp;<i> title</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#setVisible">setVisible</a></b>(bool<i> visible</i>)</td></tr>
+</table>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#activated">activated</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#activating">activating</a></b>(bool &amp;<i> allow</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#titleChanged">titleChanged</a></b>(const QString &amp;<i> title</i>)</td></tr>
+</table>
+<a name="protected-functions"></a>
+<h2>Protected Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#changeEvent">changeEvent</a></b>(QEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#event">event</a></b>(QEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#paintEvent">paintEvent</a></b>(QPaintEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#resizeEvent">resizeEvent</a></b>(QResizeEvent *<i> event</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#setGroupsHeight">setGroupsHeight</a></b>(int<i> height</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#showEvent">showEvent</a></b>(QShowEvent *<i> event</i>)</td></tr>
+</table>
+<a name="protected-slots"></a>
+<h2>Protected Slots</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#actionTriggered">actionTriggered</a></b>(QAction *<i> action</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="ribbonpage.html#released">released</a></b>()</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$RibbonPage-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>RibbonPage class implements the Ribbon UI Page. Used to place objects of type - <a href="ribbongroup.html">RibbonGroup</a>.</p>
+</div>
+<!-- @@@RibbonPage -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$ContextColor$$$ContextColorNone$$$ContextColorGreen$$$ContextColorBlue$$$ContextColorRed$$$ContextColorYellow$$$ContextColorCyan$$$ContextColorPurple$$$ContextColorOrange -->
+<h3 class="fn"><a name="ContextColor-enum"></a>enum RibbonPage::<span class="name">ContextColor</span></h3>
+<!-- @@@ContextColor -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$contextColor-prop$$$contextColor$$$setContextColorContextColor -->
+<h3 class="fn"><a name="contextColor-prop"></a><span class="name">contextColor</span> : <span class="type"><a href="ribbonpage.html#ContextColor-enum">ContextColor</a></span></h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> ContextColor </td><td class="memItemRight bottomAlign"><span class="name"><b>contextColor</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setContextColor</b></span>(ContextColor<i> color</i>)</td></tr>
+</table>
+<!-- @@@contextColor -->
+<!-- $$$contextTitle-prop$$$contextTitle$$$setContextTitleconstQString& -->
+<h3 class="fn"><a name="contextTitle-prop"></a><span class="name">contextTitle</span> : const <span class="type">QString</span> &amp;</h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> const QString &amp; </td><td class="memItemRight bottomAlign"><span class="name"><b>contextTitle</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setContextTitle</b></span>(const QString &amp;<i> title</i>)</td></tr>
+</table>
+<!-- @@@contextTitle -->
+<!-- $$$groupCount-prop$$$groupCount -->
+<h3 class="fn"><a name="groupCount-prop"></a><span class="name">groupCount</span> : const <span class="type">int</span></h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>groupCount</b></span>() const</td></tr>
+</table>
+<!-- @@@groupCount -->
+<!-- $$$title-prop$$$title$$$setTitleconstQString& -->
+<h3 class="fn"><a name="title-prop"></a><span class="name">title</span> : const <span class="type">QString</span> &amp;</h3>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> const QString &amp; </td><td class="memItemRight bottomAlign"><span class="name"><b>title</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setTitle</b></span>(const QString &amp;<i> title</i>)</td></tr>
+</table>
+<!-- @@@title -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$RibbonPage[overload1]$$$RibbonPageQWidget* -->
+<h3 class="fn"><a name="RibbonPage"></a>RibbonPage::<span class="name">RibbonPage</span>(<span class="type">QWidget</span> *<i> parent</i> = Q_NULL)</h3>
+<p>Constructs <a href="ribbonpage.html">RibbonPage</a> with the given <i>parent</i>.</p>
+<!-- @@@RibbonPage -->
+<!-- $$$RibbonPage$$$RibbonPageQWidget*constQString& -->
+<h3 class="fn"><a name="RibbonPage-2"></a>RibbonPage::<span class="name">RibbonPage</span>(<span class="type">QWidget</span> *<i> parent</i>, const <span class="type">QString</span> &amp;<i> title</i>)</h3>
+<!-- @@@RibbonPage -->
+<!-- $$$~RibbonPage[overload1]$$$~RibbonPage -->
+<h3 class="fn"><a name="dtor.RibbonPage"></a>RibbonPage::<span class="name">~RibbonPage</span>()<tt> [virtual]</tt></h3>
+<p>The object's <a href="ribbonpage.html">RibbonPage</a> destructor.</p>
+<!-- @@@~RibbonPage -->
+<!-- $$$actionTriggered[overload1]$$$actionTriggeredQAction* -->
+<h3 class="fn"><a name="actionTriggered"></a><span class="type">void</span> RibbonPage::<span class="name">actionTriggered</span>(<span class="type">QAction</span> *<i> action</i>)<tt> [protected slot]</tt></h3>
+<!-- @@@actionTriggered -->
+<!-- $$$activated[overload1]$$$activated -->
+<h3 class="fn"><a name="activated"></a><span class="type">void</span> RibbonPage::<span class="name">activated</span>()<tt> [signal]</tt></h3>
+<p>The signal is emitted then current page has been activated.</p>
+<!-- @@@activated -->
+<!-- $$$activating[overload1]$$$activatingbool& -->
+<h3 class="fn"><a name="activating"></a><span class="type">void</span> RibbonPage::<span class="name">activating</span>(<span class="type">bool</span> &amp;<i> allow</i>)<tt> [signal]</tt></h3>
+<p>The signal is emitted then current page is activating. Parameter <i>allow</i> allows you to prevent switching to this page.</p>
+<!-- @@@activating -->
+<!-- $$$addGroup[overload1]$$$addGroupRibbonGroup* -->
+<h3 class="fn"><a name="addGroup"></a><span class="type">void</span> RibbonPage::<span class="name">addGroup</span>(<span class="type"><a href="ribbongroup.html">RibbonGroup</a></span> *<i> group</i>)</h3>
+<!-- @@@addGroup -->
+<!-- $$$addGroup$$$addGroupconstQString& -->
+<h3 class="fn"><a name="addGroup-2"></a><span class="type"><a href="ribbongroup.html">RibbonGroup</a></span> * RibbonPage::<span class="name">addGroup</span>(const <span class="type">QString</span> &amp;<i> title</i>)</h3>
+<p>Add the new group with the given <i>title</i>. Returns a pointer to the new object <a href="ribbongroup.html">RibbonGroup</a>.</p>
+<!-- @@@addGroup -->
+<!-- $$$addGroup$$$addGroupconstQIcon&constQString& -->
+<h3 class="fn"><a name="addGroup-3"></a><span class="type"><a href="ribbongroup.html">RibbonGroup</a></span> * RibbonPage::<span class="name">addGroup</span>(const <span class="type">QIcon</span> &amp;<i> icon</i>, const <span class="type">QString</span> &amp;<i> title</i>)</h3>
+<!-- @@@addGroup -->
+<!-- $$$changeEvent[overload1]$$$changeEventQEvent* -->
+<h3 class="fn"><a name="changeEvent"></a><span class="type">void</span> RibbonPage::<span class="name">changeEvent</span>(<span class="type">QEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@changeEvent -->
+<!-- $$$clearGroups[overload1]$$$clearGroups -->
+<h3 class="fn"><a name="clearGroups"></a><span class="type">void</span> RibbonPage::<span class="name">clearGroups</span>()</h3>
+<p>Removes all groups from this page.</p>
+<!-- @@@clearGroups -->
+<!-- $$$defaultAction[overload1]$$$defaultAction -->
+<h3 class="fn"><a name="defaultAction"></a><span class="type">QAction</span> * RibbonPage::<span class="name">defaultAction</span>() const</h3>
+<!-- @@@defaultAction -->
+<!-- $$$event[overload1]$$$eventQEvent* -->
+<h3 class="fn"><a name="event"></a><span class="type">bool</span> RibbonPage::<span class="name">event</span>(<span class="type">QEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@event -->
+<!-- $$$getGroup[overload1]$$$getGroupint -->
+<h3 class="fn"><a name="getGroup"></a><span class="type"><a href="ribbongroup.html">RibbonGroup</a></span> * RibbonPage::<span class="name">getGroup</span>(<span class="type">int</span><i> index</i>) const</h3>
+<p>Returns a pointer to a group specified by an <i>index</i>.</p>
+<!-- @@@getGroup -->
+<!-- $$$groups[overload1]$$$groups -->
+<h3 class="fn"><a name="groups"></a><span class="type">QList</span>&lt;<span class="type"><a href="ribbongroup.html">RibbonGroup</a></span> *&gt; RibbonPage::<span class="name">groups</span>() const</h3>
+<!-- @@@groups -->
+<!-- $$$insertGroup[overload1]$$$insertGroupintRibbonGroup* -->
+<h3 class="fn"><a name="insertGroup"></a><span class="type">void</span> RibbonPage::<span class="name">insertGroup</span>(<span class="type">int</span><i> index</i>, <span class="type"><a href="ribbongroup.html">RibbonGroup</a></span> *<i> group</i>)</h3>
+<!-- @@@insertGroup -->
+<!-- $$$insertGroup$$$insertGroupintconstQString& -->
+<h3 class="fn"><a name="insertGroup-2"></a><span class="type"><a href="ribbongroup.html">RibbonGroup</a></span> * RibbonPage::<span class="name">insertGroup</span>(<span class="type">int</span><i> index</i>, const <span class="type">QString</span> &amp;<i> title</i>)</h3>
+<p>Insert the new group with the given <i>title</i> to the position <i>index</i>. Returns a pointer to the new object <a href="ribbongroup.html">RibbonGroup</a>.</p>
+<!-- @@@insertGroup -->
+<!-- $$$insertGroup$$$insertGroupintconstQIcon&constQString& -->
+<h3 class="fn"><a name="insertGroup-3"></a><span class="type"><a href="ribbongroup.html">RibbonGroup</a></span> * RibbonPage::<span class="name">insertGroup</span>(<span class="type">int</span><i> index</i>, const <span class="type">QIcon</span> &amp;<i> icon</i>, const <span class="type">QString</span> &amp;<i> title</i>)</h3>
+<!-- @@@insertGroup -->
+<!-- $$$isVisible[overload1]$$$isVisible -->
+<h3 class="fn"><a name="isVisible"></a><span class="type">bool</span> RibbonPage::<span class="name">isVisible</span>() const</h3>
+<p>Возвращает видимость страницы. Вернет true, если страница видна.</p>
+<!-- @@@isVisible -->
+<!-- $$$paintEvent[overload1]$$$paintEventQPaintEvent* -->
+<h3 class="fn"><a name="paintEvent"></a><span class="type">void</span> RibbonPage::<span class="name">paintEvent</span>(<span class="type">QPaintEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@paintEvent -->
+<!-- $$$released[overload1]$$$released -->
+<h3 class="fn"><a name="released"></a><span class="type">void</span> RibbonPage::<span class="name">released</span>()<tt> [protected slot]</tt></h3>
+<!-- @@@released -->
+<!-- $$$removeGroup[overload1]$$$removeGroupRibbonGroup* -->
+<h3 class="fn"><a name="removeGroup"></a><span class="type">void</span> RibbonPage::<span class="name">removeGroup</span>(<span class="type"><a href="ribbongroup.html">RibbonGroup</a></span> *<i> group</i>)</h3>
+<p>Removes the specified group.</p>
+<!-- @@@removeGroup -->
+<!-- $$$removeGroup$$$removeGroupint -->
+<h3 class="fn"><a name="removeGroup-2"></a><span class="type">void</span> RibbonPage::<span class="name">removeGroup</span>(<span class="type">int</span><i> index</i>)</h3>
+<p>Removes the specified group by it index.</p>
+<!-- @@@removeGroup -->
+<!-- $$$resizeEvent[overload1]$$$resizeEventQResizeEvent* -->
+<h3 class="fn"><a name="resizeEvent"></a><span class="type">void</span> RibbonPage::<span class="name">resizeEvent</span>(<span class="type">QResizeEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@resizeEvent -->
+<!-- $$$setGroupsHeight[overload1]$$$setGroupsHeightint -->
+<h3 class="fn"><a name="setGroupsHeight"></a><span class="type">void</span> RibbonPage::<span class="name">setGroupsHeight</span>(<span class="type">int</span><i> height</i>)<tt> [protected]</tt></h3>
+<!-- @@@setGroupsHeight -->
+<!-- $$$setVisible[overload1]$$$setVisiblebool -->
+<h3 class="fn"><a name="setVisible"></a><span class="type">void</span> RibbonPage::<span class="name">setVisible</span>(<span class="type">bool</span><i> visible</i>)<tt> [virtual slot]</tt></h3>
+<p>Sets the visibility of the page.</p>
+<p><b>See also </b><a href="ribbonpage.html#isVisible">isVisible</a>().</p>
+<!-- @@@setVisible -->
+<!-- $$$showEvent[overload1]$$$showEventQShowEvent* -->
+<h3 class="fn"><a name="showEvent"></a><span class="type">void</span> RibbonPage::<span class="name">showEvent</span>(<span class="type">QShowEvent</span> *<i> event</i>)<tt> [virtual protected]</tt></h3>
+<!-- @@@showEvent -->
+<!-- $$$sizeHint[overload1]$$$sizeHint -->
+<h3 class="fn"><a name="sizeHint"></a><span class="type">QSize</span> RibbonPage::<span class="name">sizeHint</span>() const<tt> [virtual]</tt></h3>
+<!-- @@@sizeHint -->
+<!-- $$$titleChanged[overload1]$$$titleChangedconstQString& -->
+<h3 class="fn"><a name="titleChanged"></a><span class="type">void</span> RibbonPage::<span class="name">titleChanged</span>(const <span class="type">QString</span> &amp;<i> title</i>)<tt> [signal]</tt></h3>
+<p>The signal is emitted after the page title has been changed.</p>
+<!-- @@@titleChanged -->
+</div>
+        </div>
+       </div>
+   </div>
+   </div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2009-2015 Developer Machines<br><br>       Qt and their respective logos are trademarks of Digia Corporation 
+      in Finland and/or other countries worldwide.</p>
+    <p>
+      All other trademarks are property of their respective owners. <a title="Privacy Policy"
+        href="http://www.devmachines.com/company/privacy-policy.html">Privacy Policy</a></p>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17002018-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
